@@ -13,7 +13,7 @@ import { pageAnime } from "../animation";
 const ProjectDetails = () => {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState);
+  const [movies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
   useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
