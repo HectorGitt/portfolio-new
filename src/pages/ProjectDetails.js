@@ -2,14 +2,18 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 //import usehistory
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 
 import { MovieState } from "../movieState";
+
+//ANIMATION
+import { motion } from "framer-motion";
+import { pageAnime } from "../animation";
 
 const ProjectDetails = () => {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies] = useState(MovieState);
+  const [movies, setMovies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
   useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
@@ -19,7 +23,12 @@ const ProjectDetails = () => {
   return (
     <>
       {movie && (
-        <Details>
+        <Details
+          variants={pageAnime}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <Head>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="mproject" />
@@ -38,7 +47,7 @@ const ProjectDetails = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 const Head = styled.div`
