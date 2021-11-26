@@ -14,11 +14,13 @@ import Nav from "./components/Nav";
 
 //animation
 import { AnimatePresence } from "framer-motion";
-
+//scrollTop
+import ScrollTop from "./components/ScrollTop";
 function App() {
   const location = useLocation();
   return (
     <div className="App">
+      <ScrollTop />
       <GlobalStyle />
       <Nav />
       <AnimatePresence exitBeforeEnter>
