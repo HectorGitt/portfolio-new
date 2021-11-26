@@ -11,7 +11,6 @@ import { Switch, Route, useLocation } from "react-router-dom";
 
 //import component
 import Nav from "./components/Nav";
-import ProjectDetails from "./pages/ProjectDetails";
 
 //animation
 import { AnimatePresence } from "framer-motion";
@@ -29,9 +28,6 @@ function App() {
           </Route>
           <Route path="/work" exact>
             <OurWork />
-          </Route>
-          <Route path="/work/:id">
-            <ProjectDetails />
           </Route>
           <Route path="/contact">
             <ContactUs />

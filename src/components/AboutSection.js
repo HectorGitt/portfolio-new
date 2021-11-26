@@ -3,33 +3,45 @@ import home from "../images/about.png";
 //styled components
 import { Hidden, LayoutStyle, DescriptionStyle, ImageStyle } from "../styles";
 //framer motion
+import { motion } from "framer-motion";
+import { fade, photoAnim, titleAnim } from "../animation";
+import Wave from "./Wave";
 
 const AboutSection = () => {
   return (
     <LayoutStyle>
       <DescriptionStyle>
-        <div>
+        <motion.div>
           <Hidden>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>
+              A Passionate <span>Engineer</span>
+            </motion.h2>
           </Hidden>
           <Hidden>
-            <h2>
-              your <span>dreams</span> come
-            </h2>
+            <motion.h2 variants={titleAnim}>seeking growth and</motion.h2>
           </Hidden>
           <Hidden>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnim}>
+              professional development{" "}
+            </motion.h2>
           </Hidden>
-        </div>
-        <p>
-          Contact us for any photography or videography ideas that you have. We
-          have professional with amazing skills
-        </p>
-        <button>Contact Us</button>
+        </motion.div>
+        <motion.p variants={fade}>
+          Looking for an avenue to explore, grow and contribute immensely to the
+          organizational growth and development.
+        </motion.p>
+        <motion.a href="mailto:adeniyi.olaitanhector@yahoo.com" variants={fade}>
+          Contact Me
+        </motion.a>
       </DescriptionStyle>
       <ImageStyle>
-        <img src={home} alt="a fresh looking black guy on white shirt" />
+        <motion.img
+          variants={photoAnim}
+          src={home}
+          alt="a fresh looking black guy on white shirt"
+        />
       </ImageStyle>
+      <Wave />
     </LayoutStyle>
   );
 };

@@ -10,44 +10,52 @@ import styled from "styled-components";
 
 //import styles
 import { LayoutStyle, DescriptionStyle, ImageStyle } from "../styles";
+import { useScroll } from "./useScroll";
+import { scrollReveal } from "../animation";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <DescriptionStyle>
         <h2>
-          High <span>quality</span> services
+          Life Survival <span> Skills</span>
         </h2>
-        <CardsStyle>
+        <CardStyle>
           <div className="card">
             <div className="icon">
               <img src={clock} alt="" />
-              <h3>Efficient</h3>
+              <h3>Time Management</h3>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={diaphragm} alt="" />
-              <h3>Diaphram</h3>
+              <h3>Problem Solving</h3>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={teamwork} alt="" />
-              <h3>Teamplayer</h3>
+              <h3>Team Spirited</h3>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={money} alt="" />
-              <h3>Affordable</h3>
+              <h3>Service Orientation</h3>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
           </div>
-        </CardsStyle>
+        </CardStyle>
       </DescriptionStyle>
       <ImageStyle>
         <img src={home2} alt="" />
@@ -56,6 +64,7 @@ const ServicesSection = () => {
   );
 };
 const Services = styled(LayoutStyle)`
+  margin-top: 200px;
   p {
     font-size: 90%;
   }
@@ -63,7 +72,7 @@ const Services = styled(LayoutStyle)`
     padding-bottom: 5rem;
   }
 `;
-const CardsStyle = styled.div`
+export const CardStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
   .card {

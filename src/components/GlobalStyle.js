@@ -9,9 +9,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html {
-  @media(max-width: 1700px) {
-    font-size: 0.75rem;
-  }
+
 }
 
 body {
@@ -21,23 +19,11 @@ body {
 }
 
 button {
-  font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  padding: 1rem 2rem;
-  border: 3px solid #23d997;
-  background: transparent;
-  color: #ffffff;
-  transition: all 0.5s ease;
-  font-family: 'Inter', sans-serif;
-  &:hover {
-    background-color: #23d997;
-    color: #fff;
-  }
+  
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 
