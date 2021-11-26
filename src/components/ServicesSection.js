@@ -32,28 +32,41 @@ const ServicesSection = () => {
               <img src={clock} alt="" />
               <h3>Time Management</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p>
+              process of planning and exercising conscious control of time spent
+              on specific activities
+            </p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={diaphragm} alt="" />
               <h3>Problem Solving</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p>
+              act of defining a problem; determining the cause of the problem;
+              identifying, prioritizing, and selecting alternatives for a
+              solution
+            </p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={teamwork} alt="" />
               <h3>Team Spirited</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p>
+              the feeling of pride and loyalty that exists among the members of
+              a team.
+            </p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={money} alt="" />
               <h3>Service Orientation</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p>
+              the ability and desire to anticipate, recognize and meet others'
+              needs.
+            </p>
           </div>
         </CardStyle>
       </DescriptionStyle>

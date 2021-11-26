@@ -36,6 +36,7 @@ function App() {
           </Route>
         </Switch>
       </AnimatePresence>
+      <ScrollTop />
     </div>
   );
 }
