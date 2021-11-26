@@ -239,6 +239,9 @@ const Buttons = styled(motion.div)`
       background-color: #23d997;
       color: #fff;
     }
+    @media (max-width: 900px) {
+      font-size: 0.7rem;
+    }
   }
 `;
 

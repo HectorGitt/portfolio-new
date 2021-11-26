@@ -18,7 +18,7 @@ const Nav = () => {
   return (
     <NavStyle>
       <h1>
-        <Link to="/" id="logo">
+        <Link to="/" id="logo" onClick={closeNav}>
           Portfolio
         </Link>
       </h1>
@@ -98,7 +98,7 @@ const NavStyle = styled.nav`
       display: grid;
       flex-direction: column;
       position: fixed;
-      top: 10%;
+      top: 10vh;
       left: 0;
       height: 50vh;
       background: #282828;

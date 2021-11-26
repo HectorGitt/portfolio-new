@@ -13,6 +13,7 @@ export const LayoutStyle = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     height: fit-content;
+
     text-align: center;
     width: 100%;
   }
@@ -59,6 +60,7 @@ export const ImageStyle = styled.div`
     object-fit: cover;
     @media (max-width: 900px) {
       margin: 0;
+      height: fit-content;
     }
   }
 `;
