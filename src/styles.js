@@ -9,6 +9,13 @@ export const LayoutStyle = styled(motion.div)`
   justify-content: space-between;
   padding: 2rem 5rem;
   color: white;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+  }
   a {
     font-weight: bold;
     font-size: 1.1rem;
@@ -30,6 +37,13 @@ export const DescriptionStyle = styled.div`
   flex: 1;
   z-index: 2;
   padding-right: 5rem;
+  @media (max-width: 900px) {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
   h2 {
     font-weight: lighter;
   }
@@ -43,6 +57,9 @@ export const ImageStyle = styled.div`
     width: 70%;
     height: 80vh;
     object-fit: cover;
+    @media (max-width: 900px) {
+      margin: 0;
+    }
   }
 `;
 export const Hidden = styled.div`

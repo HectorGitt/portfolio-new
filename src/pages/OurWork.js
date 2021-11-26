@@ -29,7 +29,9 @@ const OurWork = () => {
       <Frame4 variants={slider}></Frame4>
       <MovieStyle>
         <motion.h2 variants={fade}>Stream Lab</motion.h2>
-        <p>A Movie web app created with React, SASS and Fontwaesome</p>
+        <motion.p variants={fade}>
+          A Movie web app created with React, SASS and Fontwaesome
+        </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Hide>
           <motion.img variants={photoAnim} src={streamlab} alt="streamlab" />
@@ -53,10 +55,10 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Portfolio</h2>
-        <p>
+        <motion.p variants={fade}>
           A web app created with react,styled-component- react-router, framer
           motion, and react-intersection-observer
-        </p>
+        </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={portfolio} alt="portfolio" />
         <Buttons>
@@ -78,7 +80,9 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Soft Player</h2>
-        <p>A web app created with React,SASS and Fontawesome</p>
+        <motion.p variants={fade}>
+          A web app created with React,SASS and Fontawesome
+        </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={softplayer} alt="softplayer" />
         <Buttons>
@@ -100,9 +104,9 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Nodo Luxury</h2>
-        <p>
+        <motion.p variants={fade}>
           An Eccommerce Website Created with HTML, CSS, Bootstrap and Vanilla Js
-        </p>
+        </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={nodo} alt="nodo" />
         <Buttons>
@@ -121,7 +125,7 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Google Clone</h2>
-        <p>A Website </p>
+        <motion.p variants={fade}>A Website </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={googleclone} alt="googleclone" />
         <Buttons>
@@ -140,10 +144,10 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Ecommerce Website</h2>
-        <p>
+        <motion.p variants={fade}>
           A Django App(in Production) created with Html, CSS and Tailwind
           Javascript and Python(Django)
-        </p>
+        </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={ecommerce} alt="ecommerce" />
         <Buttons>
@@ -161,11 +165,17 @@ const WorkStyle = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem;
+  @media (max-width: 900px) {
+    padding: 0 2rem;
+  }
   p {
     color: #7e7777;
   }
   h2 {
     padding: 1rem 0;
+    @media (max-width: 900px) {
+      padding: 0;
+    }
   }
   background-color: white;
 `;
@@ -176,6 +186,11 @@ const MovieStyle = styled(motion.div)`
     height: 0.5rem;
     background: #23d997;
     margin-bottom: 3rem;
+  }
+  @media (max-width: 900px) {
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
   }
 
   img {
@@ -190,7 +205,7 @@ const Hide = styled.div`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 10%;
+  top: 0%;
   width: 100%;
   height: 100%;
   background-color: #fffebf;

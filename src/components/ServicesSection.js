@@ -71,6 +71,9 @@ const Services = styled(LayoutStyle)`
   h2 {
     padding-bottom: 5rem;
   }
+  @media (max-width: 900px) {
+    margin-top: 0;
+  }
 `;
 export const CardStyle = styled.div`
   display: flex;

@@ -13,17 +13,17 @@ const AboutSection = () => {
       <DescriptionStyle>
         <motion.div>
           <Hidden>
-            <motion.h2 variants={titleAnim}>
+            <motion.h4 variants={titleAnim}>
               A Passionate <span>Engineer</span>
-            </motion.h2>
+            </motion.h4>
           </Hidden>
           <Hidden>
-            <motion.h2 variants={titleAnim}>seeking growth and</motion.h2>
+            <motion.h4 variants={titleAnim}>seeking growth and</motion.h4>
           </Hidden>
           <Hidden>
-            <motion.h2 variants={titleAnim}>
+            <motion.h4 variants={titleAnim}>
               professional development{" "}
-            </motion.h2>
+            </motion.h4>
           </Hidden>
         </motion.div>
         <motion.p variants={fade}>

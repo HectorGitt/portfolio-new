@@ -3,9 +3,18 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import ham from "../images/icon/nav.svg";
-
+import times from "../images/icon/times.svg";
+import { useState } from "react";
+import { AnimateSharedLayout } from "framer-motion";
 const Nav = () => {
   const { pathname } = useLocation();
+  const [nav, setNav] = useState(false);
+  const toggleNav = () => {
+    setNav(!nav);
+  };
+  const closeNav = () => {
+    setNav(false);
+  };
   return (
     <NavStyle>
       <h1>
@@ -13,34 +22,46 @@ const Nav = () => {
           Portfolio
         </Link>
       </h1>
-      <img src={ham} alt="harmburger" />
-
-      <ul>
-        <li>
-          <Link to="/">1. About Us</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "80%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/work">2. My Work</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "80%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/contact">3. Contact Us</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "80%" : "0%" }}
-          />
-        </li>
-      </ul>
+      <motion.img
+        layout
+        src={!nav ? ham : times}
+        onClick={toggleNav}
+        alt="harmburger"
+      />
+      <AnimateSharedLayout>
+        <motion.ul layout className={nav ? "mobile" : ""}>
+          <li>
+            <Link to="/" onClick={closeNav}>
+              1. About Us
+            </Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/" ? "80%" : "0%" }}
+            />
+          </li>
+          <li>
+            <Link to="/work" onClick={closeNav}>
+              2. My Work
+            </Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/work" ? "80%" : "0%" }}
+            />
+          </li>
+          <li>
+            <Link to="/contact" onClick={closeNav}>
+              3. Contact Us
+            </Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/contact" ? "80%" : "0%" }}
+            />
+          </li>
+        </motion.ul>
+      </AnimateSharedLayout>
     </NavStyle>
   );
 };
@@ -60,11 +81,32 @@ const NavStyle = styled.nav`
     color: white;
     text-decoration: none;
   }
+  @media (max-width: 900px) {
+    padding: 1rem 2rem;
+  }
   ul {
     display: flex;
     list-style: none;
     width: 30rem;
     justify-content: space-between;
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+  ul.mobile {
+    @media (max-width: 900px) {
+      display: grid;
+      flex-direction: column;
+      position: fixed;
+      top: 10%;
+      left: 0;
+      height: 50vh;
+      background: #282828;
+      width: 100vw;
+      li {
+        padding: 20px;
+      }
+    }
   }
   li {
     position: relative;
@@ -79,6 +121,9 @@ const NavStyle = styled.nav`
     display: none;
     width: 30px;
     cursor: pointer;
+    @media (max-width: 900px) {
+      display: grid;
+    }
   }
 `;
 const Line = styled(motion.div)`
@@ -88,6 +133,9 @@ const Line = styled(motion.div)`
   position: absolute;
   bottom: -80%;
   left: 20%;
+  @media (max-width: 900px) {
+    bottom: 30%;
+  }
 `;
 
 export default Nav;

@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
 html {
 
 }
+.mobile {
+  @media (max-width:900px){
+    display: grid
+  };
+}
 
 body {
   background-color: #1b1b1b;
@@ -23,8 +28,11 @@ button {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
+  @media (max-width:900px){
+    margin-top: 200px;
+  };
 }
 
 h3 {
