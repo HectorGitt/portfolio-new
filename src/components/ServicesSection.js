@@ -24,7 +24,7 @@ const ServicesSection = () => {
     >
       <DescriptionStyle>
         <h2>
-          Life Survival <span> Skills</span>
+          My <span> Skills</span>
         </h2>
         <CardStyle>
           <div className="card">

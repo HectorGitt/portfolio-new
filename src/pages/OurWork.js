@@ -37,13 +37,13 @@ const OurWork = () => {
           <motion.img variants={photoAnim} src={streamlab} alt="streamlab" />
         </Hide>
         <Buttons>
-          <a target="__blank" href="https://movieapphh.netlify.app/">
-            Check Code
-          </a>
           <a
             target="__blank"
             href="https://github.com/HectorGitt/Movie-Explore"
           >
+            Check Code
+          </a>
+          <a target="__blank" href="https://movieapphh.netlify.app/">
             Preview Live
           </a>
         </Buttons>
