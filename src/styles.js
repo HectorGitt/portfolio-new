@@ -61,6 +61,8 @@ export const ImageStyle = styled.div`
     @media (max-width: 900px) {
       margin: 0;
       height: fit-content;
+      width: 90%;
+      margin-top: 50px;
     }
   }
 `;
