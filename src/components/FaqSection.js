@@ -17,45 +17,48 @@ const FaqSection = () => {
       ref={element}
     >
       <h2>
-        Any Questions <span>FAQ</span>
+        Technical <span>Skills</span>
       </h2>
       <AnimateSharedLayout>
-        <Toggle title="Who is an Engineer?">
+        <Toggle title="Html">
           <div className="answer">
             <p>
-              Engineers are professionals who invent, design, analyze, build and
-              test complex systems, structures, gadgets and materials to fulfill
-              functional objectives while considering the limitations imposed by
-              practicality, regulation, safety and cost.
+              Accessibility, Semantic Elements, Forms and Validations, SEO Basics, Multimedia
             </p>
           </div>
         </Toggle>
-        <Toggle title="How do you feel about our current state of technology?">
+        <Toggle title="CSS">
           <div className="answer">
             <p>
-              As a tech aficionado, I am always excited about new technological
-              advancements. This makes me follow up on new trends unveiled in
-              the industry.
+              BEM, Flexbox, Grid, Animations, Responsive design, neumorphism, glassmorphism, Transitions, Bootstrap, Tailwind, SASS
             </p>
           </div>
         </Toggle>
-        <Toggle title="What is the relation between your course of study and what you do?">
+        <Toggle title="JavaScript">
           <div className="answer">
             <p>
-              I strongly believe that these new advancements can be explored to
-              proffer solutions to the numerous problems encountered in the
-              agricultural sector as well as creating innovative opportunities
-              for agricultural engineering and the general agricultural
-              marketplace.
+              Function Expressions, Closure, Async, Hoisting, Callbacks, Destruction, JQuery, NPM, 
             </p>
           </div>
         </Toggle>
-        <Toggle title="How do you fit in these places?">
+        <Toggle title="React">
           <div className="answer">
             <p>
-              I am confident that I can contribute immensely to these
-              developments that have great capabilities of positively affecting
-              the society at large.
+              JSX, Webpack, React-redux, react intersection observer, react-router, React context api, Framer motion
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Python">
+          <div className="answer">
+            <p>
+              Object Oriented Programming, Data Structures and algorithms , Stacks, Queues,GUI, Modules, Django, pip, Firebase
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Other Tech Skills">
+          <div className="answer">
+            <p>
+              Git, MySql, Postgresql,OOP, Java Fundamentals, Tweepy, Selenium, Automation and bot development
             </p>
           </div>
         </Toggle>
@@ -91,6 +94,7 @@ const FaqStyle = styled(LayoutStyle)`
   }
   .answer {
     padding: 2rem 0rem;
+    height: fit-content;
   }
 `;
 

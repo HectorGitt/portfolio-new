@@ -1,4 +1,4 @@
-import home from "../images/about.png";
+import home from "../images/avatar.png";
 
 //styled components
 import { Hidden, LayoutStyle, DescriptionStyle, ImageStyle } from "../styles";

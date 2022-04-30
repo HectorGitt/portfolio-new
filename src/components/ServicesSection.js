@@ -24,7 +24,7 @@ const ServicesSection = () => {
     >
       <DescriptionStyle>
         <h2>
-          My <span> Skills</span>
+          Life Survival <span> Skills</span>
         </h2>
         <CardStyle>
           <div className="card">
@@ -103,6 +103,9 @@ export const CardStyle = styled.div`
     background: white;
     color: black;
     padding: 1rem;
+  }
+  img {
+    width:fit-content;
   }
 `;
 

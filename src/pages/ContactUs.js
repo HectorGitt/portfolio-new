@@ -25,8 +25,10 @@ const ContactUs = () => {
         </Hide>
         <Hide>
           <Social variants={titleAnim}>
-            <Circle />
-            <h2>Send An Email</h2>
+            <Link href="mailto:adeniyi.olaitanhector@yahoo.com">
+              <Circle />
+              <h2>Send An Email</h2>
+            </Link>
           </Social>
         </Hide>
         <Hide>
@@ -65,4 +67,11 @@ const Social = styled(motion.div)`
     margin: 2rem;
   }
 `;
+const Link = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color:inherit;
+`;
+
 export default ContactUs;
