@@ -129,10 +129,11 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={googleclone} alt="googleclone" />
         <Buttons>
-          <a target="__blank" href="https://hectorgitt.github.io/Google-Clone/">
+          
+          <a target="__blank" href="https://github.com/HectorGitt/Google-Clone">
             Check Code
           </a>
-          <a target="__blank" href="https://github.com/HectorGitt/Google-Clone">
+          <a target="__blank" href="https://hectorgitt.github.io/Google-Clone/">
             Preview Live
           </a>
         </Buttons>

@@ -37,7 +37,7 @@ const FaqSection = () => {
         <Toggle title="JavaScript">
           <div className="answer">
             <p>
-              Function Expressions, Closure, Async, Hoisting, Callbacks, Destruction, JQuery, NPM, 
+              Functional Expressions, Closure, Async, Hoisting, Callbacks, Destructuring, JQuery, NPM, 
             </p>
           </div>
         </Toggle>
@@ -51,14 +51,14 @@ const FaqSection = () => {
         <Toggle title="Python">
           <div className="answer">
             <p>
-              Object Oriented Programming, Data Structures and algorithms , Stacks, Queues,GUI, Modules, Django, pip, Firebase
+              Object Oriented Programming, Data Structures and algorithms , Stacks, Queues,GUI, Modules, Django, Pip, Tweepy and Selenium
             </p>
           </div>
         </Toggle>
         <Toggle title="Other Tech Skills">
           <div className="answer">
             <p>
-              Git, MySql, Postgresql,OOP, Java Fundamentals, Tweepy, Selenium, Automation and bot development
+              Git, MySql, Postgresql,OOP, Java Fundamentals, Firebase, Selenium, Automation and bot development
             </p>
           </div>
         </Toggle>
