@@ -39,7 +39,7 @@ const OurWork = () => {
         <Buttons>
           <a
             target="__blank"
-            href="https://github.com/HectorGitt/Movie-Explore"
+            href="https://github.com/HectorGitt/stream-lab"
           >
             Check Code
           </a>
@@ -56,7 +56,7 @@ const OurWork = () => {
       >
         <h2>Portfolio</h2>
         <motion.p variants={fade}>
-          A web app created with react,styled-component- react-router, framer
+          My portfolio web app created with react,styled-component- react-router, framer
           motion, and react-intersection-observer
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
@@ -81,7 +81,7 @@ const OurWork = () => {
       >
         <h2>Soft Player</h2>
         <motion.p variants={fade}>
-          A web app created with React,SASS and Fontawesome
+          A Music player app created with React,SASS and Fontawesome
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={softplayer} alt="softplayer" />
@@ -134,8 +134,8 @@ const OurWork = () => {
             Check Code
           </a>
           <a target="__blank" href="https://hectorgitt.github.io/Google-Clone/">
-            Preview Live
-          </a>
+            
+          </a>Preview Live
         </Buttons>
       </MovieStyle>
       <MovieStyle
