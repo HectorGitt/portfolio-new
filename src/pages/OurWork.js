@@ -7,6 +7,7 @@ import softplayer from "../images/projects/softplayer.png";
 import nodo from "../images/projects/nodo.png";
 import ecommerce from "../images/projects/ecommerce.png";
 import googleclone from "../images/projects/googleclone.png";
+import outlook from "../images/projects/outlook.png"
 
 //animation
 import { motion } from "framer-motion";
@@ -48,6 +49,57 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
+
+      <MovieStyle
+        ref={element}
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+      >
+        <h2>Outlook Phishing Test</h2>
+        <motion.p variants={fade}>
+          An outlook email phishing test created with ReactJs and Bootstrap
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={outlook} alt="hand holding a hook with text " />
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/outlook-phishing-test"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://sparkling-chimera-cdfaa7.netlify.app/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+
+      <MovieStyle
+        ref={element2}
+        variants={fade}
+        animate={controls2}
+        initial="hidden"
+      >
+        <h2>Soft Player</h2>
+        <motion.p variants={fade}>
+          A Music player app created with React,SASS and Fontawesome
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={softplayer} alt="softplayer" />
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/portfolio-new"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://musiccca.netlify.app/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+
       <MovieStyle
         ref={element}
         variants={fade}
@@ -73,30 +125,7 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
-      <MovieStyle
-        ref={element2}
-        variants={fade}
-        animate={controls2}
-        initial="hidden"
-      >
-        <h2>Soft Player</h2>
-        <motion.p variants={fade}>
-          A Music player app created with React,SASS and Fontawesome
-        </motion.p>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={softplayer} alt="softplayer" />
-        <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/portfolio-new"
-          >
-            Check Code
-          </a>
-          <a target="__blank" href="https://musiccca.netlify.app/">
-            Preview Live
-          </a>
-        </Buttons>
-      </MovieStyle>
+      
       <MovieStyle
         ref={element3}
         variants={fade}
