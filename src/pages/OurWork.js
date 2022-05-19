@@ -21,6 +21,7 @@ const OurWork = () => {
   const [element3, controls3] = useScroll();
   const [element4, controls4] = useScroll();
   const [element5, controls5] = useScroll();
+  const [element6, controls6] = useScroll();
   return (
     <WorkStyle variants={pageAnime} initial="hidden" animate="show" exit="exit">
       <ScrollTop />
@@ -51,9 +52,9 @@ const OurWork = () => {
       </MovieStyle>
 
       <MovieStyle
-        ref={element}
+        ref={element6}
         variants={fade}
-        animate={controls}
+        animate={controls6}
         initial="hidden"
       >
         <h2>Outlook Phishing Test</h2>
@@ -163,8 +164,8 @@ const OurWork = () => {
             Check Code
           </a>
           <a target="__blank" href="https://hectorgitt.github.io/Google-Clone/">
-            
-          </a>Preview Live
+            Preview Live
+          </a>
         </Buttons>
       </MovieStyle>
       <MovieStyle
