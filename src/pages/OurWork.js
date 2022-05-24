@@ -155,7 +155,7 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Google Clone</h2>
-        <motion.p variants={fade}>A Google clone search engine redesign with nephormism l </motion.p>
+        <motion.p variants={fade}>A Google clone search engine redesign with nephormism layout  </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={googleclone} alt="googleclone" />
         <Buttons>
