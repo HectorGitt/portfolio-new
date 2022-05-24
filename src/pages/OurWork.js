@@ -32,7 +32,7 @@ const OurWork = () => {
       <MovieStyle>
         <motion.h2 variants={fade}>Stream Lab</motion.h2>
         <motion.p variants={fade}>
-          A Movie web app created with React, SASS and Fontwaesome
+          A Movie web app created with React, SCSS,React-Context , Firebase , axios and TMDB Ap
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Hide>
@@ -84,7 +84,7 @@ const OurWork = () => {
       >
         <h2>Soft Player</h2>
         <motion.p variants={fade}>
-          A Music player app created with React,SASS and Fontawesome
+          A Music player app created with React and SCSS
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={softplayer} alt="softplayer" />
