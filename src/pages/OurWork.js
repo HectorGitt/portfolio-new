@@ -32,7 +32,7 @@ const OurWork = () => {
       <MovieStyle>
         <motion.h2 variants={fade}>Stream Lab</motion.h2>
         <motion.p variants={fade}>
-          A Movie web app created with React, SCSS,React-Context , Firebase , axios and TMDB Ap
+          A Movie web app created with React, SCSS,React-Context , Firebase , axios and TMDB Api 
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Hide>
@@ -155,7 +155,7 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Google Clone</h2>
-        <motion.p variants={fade}>A Website </motion.p>
+        <motion.p variants={fade}>A Google clone search engine redesign with nephormism l </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={googleclone} alt="googleclone" />
         <Buttons>
