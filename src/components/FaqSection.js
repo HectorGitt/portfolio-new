@@ -72,6 +72,7 @@ const FaqStyle = styled(LayoutStyle)`
   display: block;
   @media (max-width: 900px) {
     margin-top: 0;
+    text-align: left;
   }
   span {
     display: block;

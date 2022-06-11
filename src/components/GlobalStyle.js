@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
 html {
 
 }
+.download {
+  margin-left:20px;
+}
 .mobile {
   @media (max-width:900px){
     display: grid
@@ -53,12 +56,19 @@ span {
   font-weight: bold;
   color: #23d997;
 }
-
+.mobile_hide {
+  @media (max-width:900px){
+    display: none;
+  };
+}
 p {
   padding: 3rem 0;
   color: #cccccc;
   font-size: 1.4rem;
   line-height: 1.5;
+}
+.question:active {
+  background-color: none;
 }
 
 `;

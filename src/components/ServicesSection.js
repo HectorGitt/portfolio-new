@@ -71,12 +71,13 @@ const ServicesSection = () => {
         </CardStyle>
       </DescriptionStyle>
       <ImageStyle>
-        <img src={home2} alt="" />
+        <img src={home2} className='mobile_hide' alt="" />
       </ImageStyle>
     </Services>
   );
 };
 const Services = styled(LayoutStyle)`
+  
   margin-top: 200px;
   p {
     font-size: 90%;
