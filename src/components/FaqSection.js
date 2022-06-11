@@ -30,7 +30,7 @@ const FaqSection = () => {
         <Toggle title="CSS">
           <div className="answer">
             <p>
-              BEM, Flexbox, Grid, Animations, Responsive design, neumorphism, glassmorphism, Transitions, Bootstrap, Tailwind, SASS
+              BEM, Flexbox, Grid, Animations, Responsive design, neumorphism, glassmorphism, Transitions, Bootstrap, Tailwind , SCSS
             </p>
           </div>
         </Toggle>
@@ -44,7 +44,7 @@ const FaqSection = () => {
         <Toggle title="React">
           <div className="answer">
             <p>
-              JSX, Webpack, React-redux, react intersection observer, react-router, React context api, Framer motion
+              JSX, Webpack,Components , React-hooks, React-redux, react intersection observer, react-router, React-context ,React-Redux, Framer motion, Graphql and NextJs 
             </p>
           </div>
         </Toggle>
