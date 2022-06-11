@@ -1,21 +1,21 @@
 //import pages
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
-import OurWork from "./pages/OurWork";
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import OurWork from './pages/OurWork';
 
 //import globalsyles
-import GlobalStyle from "./components/GlobalStyle";
+import GlobalStyle from './components/GlobalStyle';
 
 //Router
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from 'react-router-dom';
 
 //import component
-import Nav from "./components/Nav";
+import Nav from './components/Nav';
 
 //animation
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from 'framer-motion';
 //scrollTop
-import ScrollTop from "./components/ScrollTop";
+import ScrollTop from './components/ScrollTop';
 function App() {
   const location = useLocation();
   return (
