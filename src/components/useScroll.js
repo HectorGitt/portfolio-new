@@ -6,8 +6,6 @@ export const useScroll = () => {
   const [element, view] = useInView({ threshold: 0.2, triggerOnce: true });
   if (view) {
     controls.start("show");
-  } else {
-    controls.start("hidden");
   }
   return [element, controls];
 };
