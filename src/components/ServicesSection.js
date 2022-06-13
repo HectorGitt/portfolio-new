@@ -77,7 +77,7 @@ const ServicesSection = () => {
   );
 };
 const Services = styled(LayoutStyle)`
-  
+  max-width: 100%;
   margin-top: 200px;
   p {
     font-size: 90%;

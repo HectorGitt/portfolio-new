@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Wave = () => {
   return (
     <WaveStyle
-      width="1440"
+      width= {window.innerWidth}
       height="363"
       viewBox="0 0 1440 363"
       fill="none"

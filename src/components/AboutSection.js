@@ -5,7 +5,6 @@ import { Hidden, LayoutStyle, DescriptionStyle, ImageStyle } from "../styles";
 //framer motion
 import { motion } from "framer-motion";
 import { fade, photoAnim, titleAnim } from "../animation";
-import Wave from "./Wave";
 import cv from "../file/Adeniyi.pdf";
 
 const AboutSection = () => {
@@ -47,7 +46,7 @@ const AboutSection = () => {
           alt="a fresh looking black guy on white shirt"
         />
       </ImageStyle>
-      <Wave />
+
     </LayoutStyle>
   ); 
 };

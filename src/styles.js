@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 //styled components
 export const LayoutStyle = styled(motion.div)`
   height: 100vh;
+  max-width:100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,6 +36,7 @@ export const LayoutStyle = styled(motion.div)`
   }
 `;
 export const DescriptionStyle = styled.div`
+  max-width:100%;
   flex: 1;
   z-index: 2;
   padding-right: 5rem;

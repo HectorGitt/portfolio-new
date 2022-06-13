@@ -7,9 +7,8 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
-
+  overflow-x:hidden;
 }
 
 .mobile {
@@ -31,7 +30,7 @@ body {
   background-color: #1b1b1b;
   font-family: 'Kdam Thmor Pro', sans-serif;
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100%;
 }
 
 button {
