@@ -11,18 +11,25 @@ const GlobalStyle = createGlobalStyle`
 html {
 
 }
-.download {
-  margin-left:20px;
-}
+
 .mobile {
   @media (max-width:900px){
     display: grid
   };
 }
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @media (max-width:900px){
+    align-items:center;
+    justify-content:center;
+  };
+}
 
 body {
   background-color: #1b1b1b;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Kdam Thmor Pro', sans-serif;
   overflow-x: hidden;
   width: 100vw;
 }

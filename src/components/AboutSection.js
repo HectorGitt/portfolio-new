@@ -31,12 +31,15 @@ const AboutSection = () => {
           Looking for an avenue to explore, grow and contribute immensely to the
           organizational growth and development.
         </motion.p>
-        <motion.a  href="mailto:adeniyi.olaitanhector@yahoo.com" variants={fade}>
-          Contact Me
-        </motion.a>
-        <motion.a className="download" href={cv} proposed_file_name="Adeniyi_Olaitan_CV" download="Adeniyi_Olaitan_CV" variants={fade}>
-          Download CV
-        </motion.a>
+        <div className="buttons">
+          <motion.a  href="mailto:adeniyi.olaitanhector@yahoo.com" variants={fade}>
+            Contact Me
+          </motion.a>
+          <motion.a href={cv} proposed_file_name="Adeniyi_Olaitan_CV" download="Adeniyi_Olaitan_CV" variants={fade}>
+            Download CV
+          </motion.a>
+        </div>
+        
       </DescriptionStyle>
       <ImageStyle>
         <motion.img
