@@ -6,7 +6,7 @@ import { Hidden, LayoutStyle, DescriptionStyle, ImageStyle } from "../styles";
 import { motion } from "framer-motion";
 import { fade, photoAnim, titleAnim } from "../animation";
 import Wave from "./Wave";
-import cv from "../file/Adeniyi.pdf"
+import cv from "../file/Adeniyi.pdf";
 
 const AboutSection = () => {
   return (
@@ -36,10 +36,9 @@ const AboutSection = () => {
             Contact Me
           </motion.a>
           <motion.a href={cv} proposed_file_name="Adeniyi_Olaitan_CV" download="Adeniyi_Olaitan_CV" variants={fade}>
-            Download CV
+            Download CV 
           </motion.a>
         </div>
-        
       </DescriptionStyle>
       <ImageStyle>
         <motion.img
@@ -50,7 +49,7 @@ const AboutSection = () => {
       </ImageStyle>
       <Wave />
     </LayoutStyle>
-  );
+  ); 
 };
 
 export default AboutSection;
