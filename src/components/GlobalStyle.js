@@ -7,9 +7,6 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  overflow-x:hidden;
-}
 
 .mobile {
   @media (max-width:900px){
