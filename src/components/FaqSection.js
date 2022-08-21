@@ -68,8 +68,8 @@ const FaqSection = () => {
 };
 
 const FaqStyle = styled(LayoutStyle)`
-  margin-top: 200px;
   display: block;
+  height: fit-content;
   max-width:100%;
   @media (max-width: 900px) {
     margin-top: 0;
