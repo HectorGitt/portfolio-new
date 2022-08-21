@@ -65,7 +65,7 @@ span {
   };
 }
 p {
-  padding: 0;
+  padding: 3rem 0;
   color: #cccccc;
   font-size: 1.4rem;
   line-height: 1.5;
