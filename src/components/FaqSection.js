@@ -88,15 +88,18 @@ const FaqStyle = styled(LayoutStyle)`
   .line {
     background: #cccccc;
     height: 0.3rem;
-    margin: 2rem 0rem;
+    margin: 1rem 0;
     width: 100%;
   }
   .question {
-    padding: 2rem 0rem;
+    padding: 0;
   }
   .answer {
-    padding: 2rem 0rem;
+    padding: 0;
     height: fit-content;
+  }
+  .answer p {
+    padding: 1.5rem 0;
   }
 `;
 
