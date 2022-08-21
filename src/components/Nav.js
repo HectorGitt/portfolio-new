@@ -32,7 +32,7 @@ const Nav = () => {
         <motion.ul layout className={nav ? "mobile" : ""}>
           <li>
             <Link to="/" onClick={closeNav}>
-              1. About Us
+              1. About
             </Link>
             <Line
               transition={{ duration: 0.75 }}
