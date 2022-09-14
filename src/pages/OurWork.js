@@ -148,26 +148,6 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
-      <MovieStyle
-        ref={element5}
-        variants={fade}
-        animate={controls5}
-        initial="hidden"
-      >
-        <h2>Ecommerce Website</h2>
-        <motion.p variants={fade}>
-          A Django App(in Production) created with Html, CSS and Tailwind
-          Javascript and Python(Django)
-        </motion.p>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={ecommerce} alt="ecommerce" />
-        <Buttons>
-          <a target="__blank" href="https://github.com/HectorGitt/PrEc">
-            Check Code
-          </a>
-          <button>Preview Live (Pending)</button>
-        </Buttons>
-      </MovieStyle>
     </WorkStyle>
   );
 };
