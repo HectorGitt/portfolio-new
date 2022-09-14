@@ -5,8 +5,6 @@ import streamlab from "../images/projects/streamlab.png";
 import portfolio from "../images/projects/port.png";
 import softplayer from "../images/projects/softplayer.png";
 import dropmint from "../images/projects/dropmint.png";
-import ecommerce from "../images/projects/ecommerce.png";
-import googleclone from "../images/projects/googleclone.png";
 import outlook from "../images/projects/outlook.png"
 
 //animation
