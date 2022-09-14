@@ -17,8 +17,6 @@ const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
   const [element3, controls3] = useScroll();
-  const [element4, controls4] = useScroll();
-  const [element5, controls5] = useScroll();
   const [element6, controls6] = useScroll();
   return (
     <WorkStyle variants={pageAnime} initial="hidden" animate="show" exit="exit">
