@@ -4,7 +4,7 @@ import styled from "styled-components";
 import streamlab from "../images/projects/streamlab.png";
 import portfolio from "../images/projects/port.png";
 import softplayer from "../images/projects/softplayer.png";
-import nodo from "../images/projects/nodo.png";
+import dropmint from "../images/projects/dropmint.png";
 import ecommerce from "../images/projects/ecommerce.png";
 import googleclone from "../images/projects/googleclone.png";
 import outlook from "../images/projects/outlook.png"
@@ -133,17 +133,17 @@ const OurWork = () => {
         animate={controls3}
         initial="hidden"
       >
-        <h2>Nodo Luxury</h2>
+        <h2>Dropmint</h2>
         <motion.p variants={fade}>
-          An Eccommerce Website Created with HTML, CSS, Bootstrap and Vanilla Js
+          A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy and Neverbounce Api.
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={nodo} alt="nodo" />
+        <img src={dropmint} alt="nodo" />
         <Buttons>
-          <a target="__blank" href="https://github.com/HectorGitt/Nodo-Luxury">
+          <a target="__blank" href="https://github.com/HectorGitt/twitter-mint">
             Check Code
           </a>
-          <a target="__blank" href="https://nodoluxury.netlify.app">
+          <a target="__blank" href="http://app.dropmint.com/">
             Preview Live
           </a>
         </Buttons>
