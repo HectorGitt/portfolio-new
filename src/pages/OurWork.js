@@ -149,26 +149,6 @@ const OurWork = () => {
         </Buttons>
       </MovieStyle>
       <MovieStyle
-        ref={element4}
-        variants={fade}
-        animate={controls4}
-        initial="hidden"
-      >
-        <h2>Google Clone</h2>
-        <motion.p variants={fade}>A Google clone search engine redesign with nephormism layout  </motion.p>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={googleclone} alt="googleclone" />
-        <Buttons>
-          
-          <a target="__blank" href="https://github.com/HectorGitt/Google-Clone">
-            Check Code
-          </a>
-          <a target="__blank" href="https://hectorgitt.github.io/Google-Clone/">
-            Preview Live
-          </a>
-        </Buttons>
-      </MovieStyle>
-      <MovieStyle
         ref={element5}
         variants={fade}
         animate={controls5}
