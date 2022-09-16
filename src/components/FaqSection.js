@@ -58,7 +58,7 @@ const FaqSection = () => {
         <Toggle title="Other Tech Skills">
           <div className="answer">
             <p>
-              Git, MySql, Postgresql,OOP, Java Fundamentals, Firebase, Selenium, Automation and bot development
+              Web3, Solana.py, CI/CD, Kubernetes, Git, MySql, Postgresql,OOP, Java Fundamentals, Firebase, Selenium, Automation and bot development
             </p>
           </div>
         </Toggle>
