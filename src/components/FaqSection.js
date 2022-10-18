@@ -23,42 +23,42 @@ const FaqSection = () => {
         <Toggle title="Html">
           <div className="answer">
             <p>
-              Accessibility, Semantic Elements, Forms and Validations, SEO Basics, Multimedia
+              Accessibility, Semantic Elements, Forms and Validations, SEO Basics, Multimedia.
             </p>
           </div>
         </Toggle>
         <Toggle title="CSS">
           <div className="answer">
             <p>
-              BEM, Flexbox, Grid, Animations, Responsive design, neumorphism, glassmorphism, Transitions, Bootstrap, Tailwind , SCSS
+              BEM, Flexbox, Grid, Animations, Responsive design, neumorphism, glassmorphism, Transitions, Bootstrap, Tailwind , SCSS.
             </p>
           </div>
         </Toggle>
         <Toggle title="JavaScript">
           <div className="answer">
             <p>
-              Functional Expressions, Closure, Async, Hoisting, Callbacks, Destructuring, JQuery, NPM, 
+              Functional Expressions, Closure, Async, Hoisting, Callbacks, Destructuring, JQuery, NPM, Typescript.
             </p>
           </div>
         </Toggle>
         <Toggle title="React">
           <div className="answer">
             <p>
-              JSX, Webpack,Components , React-hooks, React-redux, react intersection observer, react-router, React-context ,React-Redux, Framer motion, Graphql and NextJs 
+              JSX, Webpack,Components , React-hooks, React-redux, react intersection observer, react-router, React-context ,React-Redux, Framer motion, Graphql, NextJs.
             </p>
           </div>
         </Toggle>
         <Toggle title="Python">
           <div className="answer">
             <p>
-              Object Oriented Programming, Data Structures and algorithms , Stacks, Queues,GUI, Modules, Django, Pip, Tweepy and Selenium
+            Django, Flask, SQLAlchemy, Tweepy, Web3.py, Solana.py, pillow, Tkinter, Selenium, Object Oriented Programming, Data Structures and algorithms.
             </p>
           </div>
         </Toggle>
         <Toggle title="Other Tech Skills">
           <div className="answer">
             <p>
-              Web3, Solana.py, CI/CD, Kubernetes, Git, MySql, Postgresql,OOP, Java Fundamentals, Firebase, Selenium, Automation and bot development
+              CI/CD, Kubernetes, Docker, Git, MySql, Postgresql,OOP, Java Fundamentals, C Fundamentals, Firebase,  Celery, Redis, Automation and bot development, Cryptography, Identity Access Management.
             </p>
           </div>
         </Toggle>
