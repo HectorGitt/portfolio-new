@@ -97,6 +97,30 @@ const OurWork = () => {
         </Buttons>
       </MovieStyle>
 
+      
+      
+      <MovieStyle
+        ref={element3}
+        variants={fade}
+        animate={controls3}
+        initial="hidden"
+      >
+        <h2>Dropmint</h2>
+        <motion.p variants={fade}>
+          A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy and Neverbounce Api.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={dropmint} alt="nodo" />
+        <Buttons>
+          <a target="__blank" href="https://github.com/HectorGitt/twitter-mint">
+            Check Code
+          </a>
+          <a target="__blank" href="http://app.dropmint.com/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+
       <MovieStyle
         ref={element}
         variants={fade}
@@ -122,29 +146,21 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
-      
-      <MovieStyle
-        ref={element3}
-        variants={fade}
-        animate={controls3}
-        initial="hidden"
-      >
-        <h2>Dropmint</h2>
-        <motion.p variants={fade}>
-          A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy and Neverbounce Api.
+      <MovieStyle>
+      <motion.p variants={fade}>
+          Check out my github for more projects
+          <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/hectorGitt"
+          >
+            Github
+          </a>
+          </Buttons>
         </motion.p>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={dropmint} alt="nodo" />
-        <Buttons>
-          <a target="__blank" href="https://github.com/HectorGitt/twitter-mint">
-            Check Code
-          </a>
-          <a target="__blank" href="http://app.dropmint.com/">
-            Preview Live
-          </a>
-        </Buttons>
       </MovieStyle>
     </WorkStyle>
+
   );
 };
 
