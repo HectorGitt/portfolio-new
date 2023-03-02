@@ -6,6 +6,8 @@ import portfolio from "../images/projects/port.png";
 import softplayer from "../images/projects/softplayer.png";
 import dropmint from "../images/projects/dropmint.png";
 import outlook from "../images/projects/outlook.png"
+import dashboard from "../images/projects/dashboard.png"
+
 
 //animation
 import { motion } from "framer-motion";
@@ -13,10 +15,15 @@ import { pageAnime, fade, photoAnim, lineAnim, slider } from "../animation";
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 
+//icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
   const [element3, controls3] = useScroll();
+  const [element4, controls4] = useScroll();
   const [element6, controls6] = useScroll();
   return (
     <WorkStyle variants={pageAnime} initial="hidden" animate="show" exit="exit">
@@ -110,12 +117,34 @@ const OurWork = () => {
           A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy and Neverbounce Api.
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={dropmint} alt="nodo" />
+        <img src={dropmint} alt="dropmint" />
         <Buttons>
           <a target="__blank" href="https://github.com/HectorGitt/twitter-mint">
             Check Code
           </a>
           <a target="__blank" href="http://app.dropmint.com/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+
+      <MovieStyle
+        ref={element4}
+        variants={fade}
+        animate={controls4}
+        initial="hidden"
+      >
+        <h2>React Dashboard</h2>
+        <motion.p variants={fade}>
+          A React Admin Dashboard built with Material UI, Nivo Chart, Formik, FullCalendar and Yup.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={dashboard} alt="dashboard" />
+        <Buttons>
+          <a target="__blank" href="https://github.com/HectorGitt/react-admin">
+            Check Code
+          </a>
+          <a target="__blank" href="https://admin-dashreact.netlify.app/">
             Preview Live
           </a>
         </Buttons>
@@ -154,7 +183,7 @@ const OurWork = () => {
             target="__blank"
             href="https://github.com/hectorGitt"
           >
-            Github
+            Github <FontAwesomeIcon icon={faGithub} />
           </a>
           </Buttons>
         </motion.p>
