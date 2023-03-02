@@ -256,7 +256,7 @@ const Buttons = styled(motion.div)`
   display: flex;
   margin-top: 20px;
   justify-content: space-around;
-  * {
+  a {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
