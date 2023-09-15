@@ -7,6 +7,7 @@ import softplayer from "../images/projects/softplayer.png";
 import dropmint from "../images/projects/dropmint.png";
 import outlook from "../images/projects/outlook.png"
 import dashboard from "../images/projects/dashboard.png"
+import cardanogpt from "../images/projects/cardanogpt.png"
 
 
 //animation
@@ -20,10 +21,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const OurWork = () => {
-  const [element, controls] = useScroll();
+  const [element1, controls1] = useScroll();
   const [element2, controls2] = useScroll();
   const [element3, controls3] = useScroll();
   const [element4, controls4] = useScroll();
+  const [element5, controls5] = useScroll();
   const [element6, controls6] = useScroll();
   return (
     <WorkStyle variants={pageAnime} initial="hidden" animate="show" exit="exit">
@@ -55,9 +57,35 @@ const OurWork = () => {
       </MovieStyle>
 
       <MovieStyle
-        ref={element6}
+        ref={element1}
         variants={fade}
-        animate={controls6}
+        animate={controls1}
+        initial="hidden"
+      >
+        <h2>CardanoGPT</h2>
+        <motion.p variants={fade}>
+          
+          A React-based page, leveraging Styled Components, to enhance user engagement and drive traffic for a Web3 Solution.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={cardanogpt} alt="cardanogpt homepage" />
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/CardanoGPT"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://cardanogpt.ai/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+
+      <MovieStyle
+        ref={element2}
+        variants={fade}
+        animate={controls2}
         initial="hidden"
       >
         <h2>Outlook Phishing Test</h2>
@@ -80,9 +108,9 @@ const OurWork = () => {
       </MovieStyle>
 
       <MovieStyle
-        ref={element2}
+        ref={element3}
         variants={fade}
-        animate={controls2}
+        animate={controls3}
         initial="hidden"
       >
         <h2>Soft Player</h2>
@@ -107,9 +135,9 @@ const OurWork = () => {
       
       
       <MovieStyle
-        ref={element3}
+        ref={element4}
         variants={fade}
-        animate={controls3}
+        animate={controls4}
         initial="hidden"
       >
         <h2>Dropmint</h2>
@@ -129,9 +157,9 @@ const OurWork = () => {
       </MovieStyle>
 
       <MovieStyle
-        ref={element4}
+        ref={element5}
         variants={fade}
-        animate={controls4}
+        animate={controls5}
         initial="hidden"
       >
         <h2>React Dashboard</h2>
@@ -151,9 +179,9 @@ const OurWork = () => {
       </MovieStyle>
 
       <MovieStyle
-        ref={element}
+        ref={element6}
         variants={fade}
-        animate={controls}
+        animate={controls6}
         initial="hidden"
       >
         <h2>Portfolio</h2>
