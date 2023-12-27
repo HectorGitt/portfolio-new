@@ -8,6 +8,7 @@ import dropmint from "../images/projects/dropmint.png";
 import outlook from "../images/projects/outlook.png"
 import dashboard from "../images/projects/dashboard.png"
 import cardanogpt from "../images/projects/cardanogpt.png"
+import datcaptures from "../images/projects/datcaptures.png"
 
 
 //animation
@@ -27,6 +28,7 @@ const OurWork = () => {
   const [element4, controls4] = useScroll();
   const [element5, controls5] = useScroll();
   const [element6, controls6] = useScroll();
+  const [element7, controls7] = useScroll();
   return (
     <WorkStyle variants={pageAnime} initial="hidden" animate="show" exit="exit">
       <ScrollTop />
@@ -55,7 +57,30 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
-
+      <MovieStyle
+        ref={element7}
+        variants={fade}
+        animate={controls7}
+        initial="hidden"
+      >
+        <h2>DAT Captures</h2>
+        <motion.p variants={fade}>
+          A Photography web app created with React and Styled Components.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={datcaptures} alt="DatCaptures" />
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/DATCaptures"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://datcaptures.netlify.app/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
       <MovieStyle
         ref={element1}
         variants={fade}
