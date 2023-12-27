@@ -14,7 +14,7 @@ export const LayoutStyle = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     height: fit-content;
-
+    padding: 2rem 1rem;
     text-align: center;
     width: 100%;
   }
