@@ -65,7 +65,7 @@ const OurWork = () => {
       >
         <h2>DAT Captures</h2>
         <motion.p variants={fade}>
-          A Photography web app created with React and Styled Components.
+          A Photography web app created with NextJs and Styled Components.
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={datcaptures} alt="DatCaptures" />
