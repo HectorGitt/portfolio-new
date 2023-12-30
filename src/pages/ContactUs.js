@@ -42,7 +42,7 @@ const ContactUs = () => {
             <span>
               <a
                 target="__blank"
-                href="https://www.linkedin.com/in/adeniyi-olaitan-b72100143/"
+                href="https://www.linkedin.com/in/deniyiola"
               >
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
