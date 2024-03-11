@@ -106,7 +106,148 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
+      <MovieStyle
+        ref={element8}
+        variants={fade}
+        animate={controls8}
+        initial="hidden"
+      >
+        <h2>getLinked</h2>
+        <motion.p variants={fade}>
+          An Hackathon registration platform created with ReactJs: Axios for handling HTTP Request, Formik and Yup for handling forms and validations, Framer motion and react-intersection-observer for animations and transitions.
+          </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={getlinked} alt="getlinked homepage" />
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/getlinked"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://getlinkd.netlify.app">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+      
+      <MovieStyle
+        ref={element9}
+        variants={fade}
+        animate={controls9}
+        initial="hidden"
+      >
+        <h2>Adacubator</h2>
+        <motion.p variants={fade}>
+          An Idea Pitching Website created with nextjs.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={adacubator} alt="adacubator homepage" />
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/adacubator"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://adacubator.com/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
 
+      <MovieStyle
+        ref={element9}
+        variants={fade}
+        animate={controls9}
+        initial="hidden"
+      >
+        <h2>Adacubator</h2>
+        <motion.p variants={fade}>
+          An Idea Pitching Website created with nextjs.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={adacubator} alt="adacubator homepage" />
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/adacubator"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://adacubator.com/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+      
+      
+      <MovieStyle
+        ref={element4}
+        variants={fade}
+        animate={controls4}
+        initial="hidden"
+      >
+        <h2>Dropmint</h2>
+        <motion.p variants={fade}>
+          A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy and Neverbounce Api.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={dropmint} alt="dropmint" />
+        <Buttons>
+          <a target="__blank" href="https://github.com/HectorGitt/twitter-mint">
+            Check Code
+          </a>
+          <a target="__blank" href="http://app.dropmint.com/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+
+      <MovieStyle
+        ref={element5}
+        variants={fade}
+        animate={controls5}
+        initial="hidden"
+      >
+        <h2>React Dashboard</h2>
+        <motion.p variants={fade}>
+          A React Admin Dashboard built with Material UI, Nivo Chart, Formik, FullCalendar and Yup.
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <img src={dashboard} alt="dashboard" />
+        <Buttons>
+          <a target="__blank" href="https://github.com/HectorGitt/react-admin">
+            Check Code
+          </a>
+          <a target="__blank" href="https://admin-dashreact.netlify.app/">
+            Preview Live
+          </a>
+        </Buttons>
+      </MovieStyle>
+
+
+
+      <MovieStyle>
+        <motion.h2 variants={fade}>Stream Lab</motion.h2>
+        <motion.p variants={fade}>
+          A Movie web app created with React, SCSS,React-Context , Firebase , axios and TMDB Api 
+        </motion.p>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <Hide>
+          <motion.img variants={photoAnim} src={streamlab} alt="streamlab" />
+        </Hide>
+        <Buttons>
+          <a
+            target="__blank"
+            href="https://github.com/HectorGitt/stream-lab"
+          >
+            Check Code
+          </a>
+          <a target="__blank" href="https://movieapphh.netlify.app/">
+            Preview Live
+          </a>
+        </Buttons>
       <MovieStyle
         ref={element2}
         variants={fade}
@@ -152,52 +293,6 @@ const OurWork = () => {
             Check Code
           </a>
           <a target="__blank" href="https://musiccca.netlify.app/">
-            Preview Live
-          </a>
-        </Buttons>
-      </MovieStyle>
-
-      
-      
-      <MovieStyle
-        ref={element4}
-        variants={fade}
-        animate={controls4}
-        initial="hidden"
-      >
-        <h2>Dropmint</h2>
-        <motion.p variants={fade}>
-          A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy and Neverbounce Api.
-        </motion.p>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={dropmint} alt="dropmint" />
-        <Buttons>
-          <a target="__blank" href="https://github.com/HectorGitt/twitter-mint">
-            Check Code
-          </a>
-          <a target="__blank" href="http://app.dropmint.com/">
-            Preview Live
-          </a>
-        </Buttons>
-      </MovieStyle>
-
-      <MovieStyle
-        ref={element5}
-        variants={fade}
-        animate={controls5}
-        initial="hidden"
-      >
-        <h2>React Dashboard</h2>
-        <motion.p variants={fade}>
-          A React Admin Dashboard built with Material UI, Nivo Chart, Formik, FullCalendar and Yup.
-        </motion.p>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={dashboard} alt="dashboard" />
-        <Buttons>
-          <a target="__blank" href="https://github.com/HectorGitt/react-admin">
-            Check Code
-          </a>
-          <a target="__blank" href="https://admin-dashreact.netlify.app/">
             Preview Live
           </a>
         </Buttons>
