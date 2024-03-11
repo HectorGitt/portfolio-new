@@ -9,6 +9,9 @@ import outlook from "../images/projects/outlook.png"
 import dashboard from "../images/projects/dashboard.png"
 import cardanogpt from "../images/projects/cardanogpt.png"
 import datcaptures from "../images/projects/datcaptures.png"
+import getlinked from "../images/projects/getlinked.png"
+import adacubator from "../images/projects/adacubator.png"
+import hypertrove from "../images/projects/hypertrove.png"
 
 
 //animation
@@ -29,34 +32,13 @@ const OurWork = () => {
   const [element5, controls5] = useScroll();
   const [element6, controls6] = useScroll();
   const [element7, controls7] = useScroll();
+  const [element8, controls8] = useScroll();
+  const [element9, controls9] = useScroll();
+  const [element10, controls10] = useScroll();
   return (
     <WorkStyle variants={pageAnime} initial="hidden" animate="show" exit="exit">
       <ScrollTop />
-      <Frame1 variants={slider}></Frame1>
-      <Frame2 variants={slider}></Frame2>
-      <Frame3 variants={slider}></Frame3>
-      <Frame4 variants={slider}></Frame4>
-      <MovieStyle>
-        <motion.h2 variants={fade}>Stream Lab</motion.h2>
-        <motion.p variants={fade}>
-          A Movie web app created with React, SCSS,React-Context , Firebase , axios and TMDB Api 
-        </motion.p>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Hide>
-          <motion.img variants={photoAnim} src={streamlab} alt="streamlab" />
-        </Hide>
-        <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/stream-lab"
-          >
-            Check Code
-          </a>
-          <a target="__blank" href="https://movieapphh.netlify.app/">
-            Preview Live
-          </a>
-        </Buttons>
-      </MovieStyle>
+      
       <MovieStyle
         ref={element7}
         variants={fade}
@@ -157,17 +139,17 @@ const OurWork = () => {
       </MovieStyle>
 
       <MovieStyle
-        ref={element9}
+        ref={element10}
         variants={fade}
-        animate={controls9}
+        animate={controls10}
         initial="hidden"
       >
-        <h2>Adacubator</h2>
+        <h2>Hypertrove</h2>
         <motion.p variants={fade}>
           An Idea Pitching Website created with nextjs.
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <img src={adacubator} alt="adacubator homepage" />
+        <img src={hypertrove} alt="hypertrove homepage" />
         <Buttons>
           <a
             target="__blank"
@@ -248,6 +230,7 @@ const OurWork = () => {
             Preview Live
           </a>
         </Buttons>
+      </MovieStyle>
       <MovieStyle
         ref={element2}
         variants={fade}
