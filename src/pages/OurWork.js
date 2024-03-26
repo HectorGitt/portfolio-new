@@ -364,25 +364,6 @@ const Hide = styled.div`
   overflow: hidden;
 `;
 
-//frame animation
-const Frame1 = styled(motion.div)`
-  position: fixed;
-  left: 0;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: #fffebf;
-  z-index: 2;
-`;
-const Frame2 = styled(Frame1)`
-  background: #ff8efb;
-`;
-const Frame3 = styled(Frame1)`
-  background: #8ed2ff;
-`;
-const Frame4 = styled(Frame1)`
-  background: #8effa0;
-`;
 const Buttons = styled(motion.div)`
   display: flex;
   margin-top: 20px;
