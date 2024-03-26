@@ -5,18 +5,17 @@ import streamlab from "../images/projects/streamlab.png";
 import portfolio from "../images/projects/port.png";
 import softplayer from "../images/projects/softplayer.png";
 import dropmint from "../images/projects/dropmint.png";
-import outlook from "../images/projects/outlook.png"
-import dashboard from "../images/projects/dashboard.png"
-import cardanogpt from "../images/projects/cardanogpt.png"
-import datcaptures from "../images/projects/datcaptures.png"
-import getlinked from "../images/projects/getlinked.png"
-import adacubator from "../images/projects/adacubator.png"
-import hypertrove from "../images/projects/hypertrove.png"
-
+import outlook from "../images/projects/outlook.png";
+import dashboard from "../images/projects/dashboard.png";
+import cardanogpt from "../images/projects/cardanogpt.png";
+import datcaptures from "../images/projects/datcaptures.png";
+import getlinked from "../images/projects/getlinked.png";
+import adacubator from "../images/projects/adacubator.png";
+import hypertrove from "../images/projects/hypertrove.png";
 
 //animation
 import { motion } from "framer-motion";
-import { pageAnime, fade, photoAnim, lineAnim, slider } from "../animation";
+import { pageAnime, fade, photoAnim, lineAnim } from "../animation";
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 
@@ -38,7 +37,7 @@ const OurWork = () => {
   return (
     <WorkStyle variants={pageAnime} initial="hidden" animate="show" exit="exit">
       <ScrollTop />
-      
+
       <MovieStyle
         ref={element7}
         variants={fade}
@@ -52,10 +51,7 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={datcaptures} alt="DatCaptures" />
         <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/DATCaptures"
-          >
+          <a target="__blank" href="https://github.com/HectorGitt/DATCaptures">
             Check Code
           </a>
           <a target="__blank" href="https://datcaptures.netlify.app/">
@@ -71,16 +67,13 @@ const OurWork = () => {
       >
         <h2>CardanoGPT</h2>
         <motion.p variants={fade}>
-          
-          A React-based page, leveraging Styled Components, to enhance user engagement and drive traffic for a Web3 Solution.
+          A React-based page, leveraging Styled Components, to enhance user
+          engagement and drive traffic for a Web3 Solution.
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={cardanogpt} alt="cardanogpt homepage" />
         <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/CardanoGPT"
-          >
+          <a target="__blank" href="https://github.com/HectorGitt/CardanoGPT">
             Check Code
           </a>
           <a target="__blank" href="https://cardanogpt.ai/">
@@ -96,15 +89,15 @@ const OurWork = () => {
       >
         <h2>getLinked</h2>
         <motion.p variants={fade}>
-          An Hackathon registration platform created with ReactJs: Axios for handling HTTP Request, Formik and Yup for handling forms and validations, Framer motion and react-intersection-observer for animations and transitions.
-          </motion.p>
+          An Hackathon registration platform created with ReactJs: Axios for
+          handling HTTP Request, Formik and Yup for handling forms and
+          validations, Framer motion and react-intersection-observer for
+          animations and transitions.
+        </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={getlinked} alt="getlinked homepage" />
         <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/getlinked"
-          >
+          <a target="__blank" href="https://github.com/HectorGitt/getlinked">
             Check Code
           </a>
           <a target="__blank" href="https://getlinkd.netlify.app">
@@ -112,7 +105,7 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
-      
+
       <MovieStyle
         ref={element9}
         variants={fade}
@@ -126,10 +119,7 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={adacubator} alt="adacubator homepage" />
         <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/adacubator"
-          >
+          <a target="__blank" href="https://github.com/HectorGitt/adacubator">
             Check Code
           </a>
           <a target="__blank" href="https://adacubator.com/">
@@ -151,10 +141,7 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={hypertrove} alt="hypertrove homepage" />
         <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/adacubator"
-          >
+          <a target="__blank" href="https://github.com/HectorGitt/adacubator">
             Check Code
           </a>
           <a target="__blank" href="https://adacubator.com/">
@@ -162,8 +149,7 @@ const OurWork = () => {
           </a>
         </Buttons>
       </MovieStyle>
-      
-      
+
       <MovieStyle
         ref={element4}
         variants={fade}
@@ -172,7 +158,8 @@ const OurWork = () => {
       >
         <h2>Dropmint</h2>
         <motion.p variants={fade}>
-          A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy and Neverbounce Api.
+          A Sweep Stake Platform created with Django, Web3.py, Solana.py, tweepy
+          and Neverbounce Api.
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={dropmint} alt="dropmint" />
@@ -194,7 +181,8 @@ const OurWork = () => {
       >
         <h2>React Dashboard</h2>
         <motion.p variants={fade}>
-          A React Admin Dashboard built with Material UI, Nivo Chart, Formik, FullCalendar and Yup.
+          A React Admin Dashboard built with Material UI, Nivo Chart, Formik,
+          FullCalendar and Yup.
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={dashboard} alt="dashboard" />
@@ -208,22 +196,18 @@ const OurWork = () => {
         </Buttons>
       </MovieStyle>
 
-
-
       <MovieStyle>
         <motion.h2 variants={fade}>Stream Lab</motion.h2>
         <motion.p variants={fade}>
-          A Movie web app created with React, SCSS,React-Context , Firebase , axios and TMDB Api 
+          A Movie web app created with React, SCSS,React-Context , Firebase ,
+          axios and TMDB Api
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Hide>
           <motion.img variants={photoAnim} src={streamlab} alt="streamlab" />
         </Hide>
         <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/HectorGitt/stream-lab"
-          >
+          <a target="__blank" href="https://github.com/HectorGitt/stream-lab">
             Check Code
           </a>
           <a target="__blank" href="https://movieapphh.netlify.app/">
@@ -250,7 +234,10 @@ const OurWork = () => {
           >
             Check Code
           </a>
-          <a target="__blank" href="https://sparkling-chimera-cdfaa7.netlify.app/">
+          <a
+            target="__blank"
+            href="https://sparkling-chimera-cdfaa7.netlify.app/"
+          >
             Preview Live
           </a>
         </Buttons>
@@ -289,8 +276,8 @@ const OurWork = () => {
       >
         <h2>Portfolio</h2>
         <motion.p variants={fade}>
-          My portfolio web app created with react,styled-component- react-router, framer
-          motion, and react-intersection-observer
+          My portfolio web app created with react,styled-component-
+          react-router, framer motion, and react-intersection-observer
         </motion.p>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <img src={portfolio} alt="portfolio" />
@@ -307,20 +294,16 @@ const OurWork = () => {
         </Buttons>
       </MovieStyle>
       <MovieStyle>
-      <motion.p variants={fade}>
+        <motion.p variants={fade}>
           Check out my github for more projects
           <Buttons>
-          <a
-            target="__blank"
-            href="https://github.com/hectorGitt"
-          >
-            Github <FontAwesomeIcon icon={faGithub} />
-          </a>
+            <a target="__blank" href="https://github.com/hectorGitt">
+              Github <FontAwesomeIcon icon={faGithub} />
+            </a>
           </Buttons>
         </motion.p>
       </MovieStyle>
     </WorkStyle>
-
   );
 };
 
