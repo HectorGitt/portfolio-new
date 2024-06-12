@@ -117,7 +117,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://cardanogpt.ai/">
+					<a target="__blank" href="https://cardanogpt.netlify.app/">
 						Preview Live
 					</a>
 				</Buttons>
