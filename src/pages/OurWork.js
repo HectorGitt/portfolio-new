@@ -71,19 +71,6 @@ const OurWork = () => {
 					</a>
 				</Buttons>
 			</MovieStyle>
-			<MovieStyle>
-				<motion.p variants={fade}>
-					Check out my github for more projects
-					<Buttons>
-						<a
-							target="__blank"
-							href="https://github.com/hectorGitt"
-						>
-							Github <FontAwesomeIcon icon={faGithub} />
-						</a>
-					</Buttons>
-				</motion.p>
-			</MovieStyle>
 
 			<MovieStyle
 				ref={element7}
@@ -346,6 +333,20 @@ const OurWork = () => {
 						Preview Live
 					</a>
 				</Buttons>
+			</MovieStyle>
+
+			<MovieStyle>
+				<motion.p variants={fade}>
+					Check out my github for more projects
+					<Buttons>
+						<a
+							target="__blank"
+							href="https://github.com/hectorGitt"
+						>
+							Github <FontAwesomeIcon icon={faGithub} />
+						</a>
+					</Buttons>
+				</motion.p>
 			</MovieStyle>
 		</WorkStyle>
 	);
