@@ -63,10 +63,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href="https://collat-finance.netlify.app/"
-					>
+					<a target="__blank" href="https://collat.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
@@ -92,7 +89,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://datcaptures.netlify.app/">
+					<a target="__blank" href="https://datcaptures.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
@@ -117,7 +114,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://cardanogpt.netlify.app/">
+					<a target="__blank" href="https://cardanogpt.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
@@ -144,7 +141,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://getlinkd.netlify.app">
+					<a target="__blank" href="https://getlinked.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
@@ -190,11 +187,11 @@ const OurWork = () => {
 				<Buttons>
 					<a
 						target="__blank"
-						href="https://github.com/HectorGitt/adacubator"
+						href="https://github.com/HectorGitt/hypertrove"
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://adacubator.com/">
+					<a target="__blank" href="https://hypertrove.ventures/">
 						Preview Live
 					</a>
 				</Buttons>
@@ -246,10 +243,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href="https://admin-dashreact.netlify.app/"
-					>
+					<a target="__blank" href="https://dashboard.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
@@ -276,7 +270,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://movieapphh.netlify.app/">
+					<a target="__blank" href="https://streamlab.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
@@ -301,10 +295,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href="https://sparkling-chimera-cdfaa7.netlify.app/"
-					>
+					<a target="__blank" href="https://phishing-test.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
@@ -329,7 +320,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://musiccca.netlify.app/">
+					<a target="__blank" href="https://music.deniyi.dev">
 						Preview Live
 					</a>
 				</Buttons>
