@@ -12,6 +12,7 @@ import datcaptures from "../images/projects/datcaptures.png";
 import getlinked from "../images/projects/getlinked.png";
 import adacubator from "../images/projects/adacubator.png";
 import hypertrove from "../images/projects/hypertrove.png";
+import defimentum from "../images/projects/defimentum.png";
 
 //animation
 import { motion } from "framer-motion";
@@ -34,6 +35,7 @@ const OurWork = () => {
 	const [element8, controls8] = useScroll();
 	const [element9, controls9] = useScroll();
 	const [element10, controls10] = useScroll();
+	const [element11, controls11] = useScroll();
 	const cleanHost = window.location.host.replace(/^www\./, "");
 	return (
 		<WorkStyle
@@ -173,7 +175,40 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://adacubator.com/">
+					<a
+						target="__blank"
+						href={`https://adacubator.${cleanHost}`}
+					>
+						Preview Live
+					</a>
+				</Buttons>
+			</MovieStyle>
+
+			{/* Defimentum card inserted at the middle */}
+			<MovieStyle
+				variants={fade}
+				ref={element11}
+				animate={controls11}
+				initial="hidden"
+			>
+				<h2>Defimentum</h2>
+				<motion.p variants={fade}>
+					Defimentum is a value-add-focused angel investment outfit on
+					a mission to architect the future of Crypto.
+				</motion.p>
+				<motion.div variants={lineAnim} className="line"></motion.div>
+				<img src={defimentum} alt="defimentum homepage" />
+				<Buttons>
+					<a
+						target="__blank"
+						href="https://github.com/HectorGitt/defimentum"
+					>
+						Check Code
+					</a>
+					<a
+						target="__blank"
+						href={`https://defimentum.${cleanHost}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -198,7 +233,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://hypertrove.ventures/">
+					<a
+						target="__blank"
+						href={`https://hypertrove.${cleanHost}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
