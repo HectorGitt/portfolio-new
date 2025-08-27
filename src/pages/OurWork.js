@@ -357,8 +357,13 @@ const WorkStyle = styled(motion.div)`
 	min-height: 100vh;
 	overflow: hidden;
 	padding: 5rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	background-color: white;
 	@media (max-width: 900px) {
 		padding: 0 2rem;
+		grid-template-columns: 1fr;
 	}
 	p {
 		color: #7e7777;
@@ -369,24 +374,29 @@ const WorkStyle = styled(motion.div)`
 			padding: 0;
 		}
 	}
-	background-color: white;
 `;
 
 const MovieStyle = styled(motion.div)`
-	padding-bottom: 10rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	.line {
 		height: 0.5rem;
 		background: #23d997;
 		margin-bottom: 3rem;
 	}
 	@media (max-width: 900px) {
-		padding-bottom: 4rem;
+		padding: 1rem;
 		margin-bottom: 0;
 		padding-top: 2rem;
 	}
-
 	img {
 		width: 100%;
+		border-radius: 8px;
 	}
 `;
 const Hide = styled.div`
