@@ -34,6 +34,7 @@ const OurWork = () => {
 	const [element8, controls8] = useScroll();
 	const [element9, controls9] = useScroll();
 	const [element10, controls10] = useScroll();
+	const cleanHost = window.location.host.replace(/^www\./, "");
 	return (
 		<WorkStyle
 			variants={pageAnime}
@@ -63,10 +64,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href={`https://collat.${window.location.host}`}
-					>
+					<a target="__blank" href={`https://collat.${cleanHost}`}>
 						Preview Live
 					</a>
 				</Buttons>
@@ -94,7 +92,7 @@ const OurWork = () => {
 					</a>
 					<a
 						target="__blank"
-						href={`https://datcaptures.${window.location.host}`}
+						href={`https://datcaptures.${cleanHost}`}
 					>
 						Preview Live
 					</a>
@@ -122,7 +120,7 @@ const OurWork = () => {
 					</a>
 					<a
 						target="__blank"
-						href={`https://cardanogpt.${window.location.host}`}
+						href={`https://cardanogpt.${cleanHost}`}
 					>
 						Preview Live
 					</a>
@@ -150,10 +148,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href={`https://getlinked.${window.location.host}`}
-					>
+					<a target="__blank" href={`https://getlinked.${cleanHost}`}>
 						Preview Live
 					</a>
 				</Buttons>
@@ -255,10 +250,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href={`https://dashboard.${window.location.host}`}
-					>
+					<a target="__blank" href={`https://dashboard.${cleanHost}`}>
 						Preview Live
 					</a>
 				</Buttons>
@@ -285,10 +277,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href={`https://streamlab.${window.location.host}`}
-					>
+					<a target="__blank" href={`https://streamlab.${cleanHost}`}>
 						Preview Live
 					</a>
 				</Buttons>
@@ -315,7 +304,7 @@ const OurWork = () => {
 					</a>
 					<a
 						target="__blank"
-						href={`https://phishing-test.${window.location.host}`}
+						href={`https://phishing-test.${cleanHost}`}
 					>
 						Preview Live
 					</a>
@@ -341,10 +330,7 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a
-						target="__blank"
-						href={`https://music.${window.location.host}`}
-					>
+					<a target="__blank" href={`https://music.${cleanHost}`}>
 						Preview Live
 					</a>
 				</Buttons>
