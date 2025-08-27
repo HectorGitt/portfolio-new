@@ -63,7 +63,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://collat.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://collat.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -89,7 +92,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://datcaptures.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://datcaptures.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -114,7 +120,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://cardanogpt.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://cardanogpt.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -141,7 +150,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://getlinked.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://getlinked.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -243,7 +255,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://dashboard.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://dashboard.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -270,7 +285,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://streamlab.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://streamlab.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -295,7 +313,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://phishing-test.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://phishing-test.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -320,7 +341,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://music.deniyi.dev">
+					<a
+						target="__blank"
+						href={`https://music.${window.location.host}`}
+					>
 						Preview Live
 					</a>
 				</Buttons>
