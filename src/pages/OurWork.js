@@ -407,19 +407,25 @@ const OurWork = () => {
 				</Buttons>
 			</MovieStyle>
 
-			<MovieStyle>
+			{/* Centered GitHub section */}
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					justifyContent: "center",
+					marginTop: "2rem",
+				}}
+			>
 				<motion.p variants={fade}>
-					Check out my github for more projects
-					<Buttons>
-						<a
-							target="__blank"
-							href="https://github.com/hectorGitt"
-						>
-							Github <FontAwesomeIcon icon={faGithub} />
-						</a>
-					</Buttons>
+					Check out my GitHub for more projects
 				</motion.p>
-			</MovieStyle>
+				<Buttons>
+					<a target="__blank" href="https://github.com/hectorGitt">
+						GitHub <FontAwesomeIcon icon={faGithub} />
+					</a>
+				</Buttons>
+			</div>
 		</WorkStyle>
 	);
 };
