@@ -13,6 +13,7 @@ import getlinked from "../images/projects/getlinked.png";
 import adacubator from "../images/projects/adacubator.png";
 import hypertrove from "../images/projects/hypertrove.png";
 import defimentum from "../images/projects/defimentum.png";
+import copernican from "../images/projects/copernican.png";
 
 //animation
 import { motion } from "framer-motion";
@@ -36,6 +37,7 @@ const OurWork = () => {
 	const [element9, controls9] = useScroll();
 	const [element10, controls10] = useScroll();
 	const [element11, controls11] = useScroll();
+	const [element12, controls12] = useScroll();
 	const cleanHost = window.location.host.replace(/^www\./, "");
 	return (
 		<WorkStyle
@@ -208,6 +210,37 @@ const OurWork = () => {
 					<a
 						target="__blank"
 						href={`https://defimentum.${cleanHost}`}
+					>
+						Preview Live
+					</a>
+				</Buttons>
+			</MovieStyle>
+
+			{/* Copernican card inserted after Defimentum */}
+			<MovieStyle
+				ref={element12}
+				variants={fade}
+				animate={controls12}
+				initial="hidden"
+			>
+				<h2>Copernican</h2>
+				<motion.p variants={fade}>
+					Copernican is a 3D solar system viewer simulating planetary
+					orbits, sunlight dynamics, and natural events using NASA’s
+					EONET API.
+				</motion.p>
+				<motion.div variants={lineAnim} className="line"></motion.div>
+				<img src={copernican} alt="copernican homepage" />
+				<Buttons>
+					<a
+						target="__blank"
+						href="https://github.com/HectorGitt/copernican"
+					>
+						Check Code
+					</a>
+					<a
+						target="__blank"
+						href={`https://copernican.${cleanHost}`}
 					>
 						Preview Live
 					</a>
