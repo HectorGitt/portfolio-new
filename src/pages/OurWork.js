@@ -436,44 +436,97 @@ const WorkStyle = styled(motion.div)`
 	padding: 5rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
-	background-color: white;
+	gap: 3rem;
+	background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(
+				circle at 20% 30%,
+				rgba(0, 212, 255, 0.05) 0%,
+				transparent 50%
+			),
+			radial-gradient(
+				circle at 80% 70%,
+				rgba(35, 217, 151, 0.05) 0%,
+				transparent 50%
+			);
+		pointer-events: none;
+	}
 	@media (max-width: 900px) {
-		padding: 0 2rem;
+		padding: 2rem 1rem;
 		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
 	p {
-		color: #7e7777;
+		color: #cbd5e1;
+		font-size: 1.1rem;
+		line-height: 1.6;
 	}
 	h2 {
 		padding: 1rem 0;
+		font-size: 1.8rem;
+		font-weight: 600;
+		color: #f8fafc;
 		@media (max-width: 900px) {
-			padding: 0;
+			padding: 0.5rem 0;
+			font-size: 1.5rem;
 		}
 	}
 `;
 
 const MovieStyle = styled(motion.div)`
-	background: #fff;
-	border-radius: 10px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-	padding: 2rem;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 20px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 212, 255, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 2.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(135deg, #00d4ff 0%, #23d997 100%);
+	}
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4),
+			0 0 30px rgba(0, 212, 255, 0.2);
+	}
 	.line {
-		height: 0.5rem;
-		background: #23d997;
-		margin-bottom: 3rem;
+		height: 0.3rem;
+		background: linear-gradient(135deg, #00d4ff 0%, #23d997 100%);
+		margin-bottom: 2rem;
+		border-radius: 2px;
+		box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 	}
 	@media (max-width: 900px) {
-		padding: 1rem;
+		padding: 1.5rem;
 		margin-bottom: 0;
 		padding-top: 2rem;
 	}
 	img {
 		width: 100%;
-		border-radius: 8px;
+		border-radius: 12px;
+		transition: all 0.3s ease;
+		&:hover {
+			transform: scale(1.02);
+		}
 	}
 `;
 const Hide = styled.div`
@@ -485,22 +538,26 @@ const Buttons = styled(motion.div)`
 	margin-top: 20px;
 	justify-content: space-around;
 	a {
-		font-weight: bold;
-		font-size: 1.1rem;
+		font-weight: 600;
+		font-size: 1rem;
 		cursor: pointer;
-		padding: 1rem 2rem;
-		border: 3px solid #23d997;
-		background: #ffffff;
-		color: #141414;
-		transition: all 0.5s ease;
+		padding: 0.8rem 1.5rem;
+		border: 2px solid transparent;
+		background: linear-gradient(135deg, #00d4ff 0%, #23d997 100%);
+		color: #ffffff;
+		transition: all 0.3s ease;
 		font-family: "Inter", sans-serif;
 		text-decoration: none;
+		border-radius: 8px;
+		box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
 		&:hover {
-			background-color: #23d997;
-			color: #fff;
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+			background: linear-gradient(135deg, #23d997 0%, #00d4ff 100%);
 		}
 		@media (max-width: 900px) {
-			font-size: 0.7rem;
+			font-size: 0.8rem;
+			padding: 0.7rem 1.2rem;
 		}
 	}
 `;

@@ -32,6 +32,7 @@ const AboutSection = () => {
 					Looking for an avenue to explore, grow and contribute
 					immensely to the organizational growth and development.
 				</motion.p>
+
 				<div className="buttons">
 					<motion.a
 						href="mailto:adeniyi.olaitanhector@yahoo.com"
