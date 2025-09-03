@@ -14,6 +14,7 @@ import adacubator from "../images/projects/adacubator.png";
 import hypertrove from "../images/projects/hypertrove.png";
 import defimentum from "../images/projects/defimentum.png";
 import copernican from "../images/projects/copernican.png";
+import codeity from "../images/projects/codeity.png";
 
 //animation
 import { motion } from "framer-motion";
@@ -38,6 +39,7 @@ const OurWork = () => {
 	const [element10, controls10] = useScroll();
 	const [element11, controls11] = useScroll();
 	const [element12, controls12] = useScroll();
+	const [element13, controls13] = useScroll();
 	const cleanHost = window.location.host.replace(/^www\./, "");
 	return (
 		<WorkStyle
@@ -47,6 +49,36 @@ const OurWork = () => {
 			exit="exit"
 		>
 			<ScrollTop />
+
+			{/* Codeity - Security Scanner */}
+			<MovieStyle
+				ref={element13}
+				variants={fade}
+				animate={controls13}
+				initial="hidden"
+			>
+				<h2>Codeity</h2>
+				<motion.p variants={fade}>
+					A comprehensive full-stack security vulnerability scanner
+					built with FastAPI that analyzes codebases for security
+					breaches, vulnerabilities, and malware intentions. Supports
+					file uploads, GitHub repository scanning and multi-language
+					scanning.
+				</motion.p>
+				<motion.div variants={lineAnim} className="line"></motion.div>
+				<img src={codeity} alt="Codeity" />
+				<Buttons>
+					<a
+						target="__blank"
+						href="https://github.com/HectorGitt/codeity"
+					>
+						Check Code
+					</a>
+					<a target="__blank" href="https://codeity.onrender.com">
+						Preview Live
+					</a>
+				</Buttons>
+			</MovieStyle>
 
 			<MovieStyle
 				ref={element6}
