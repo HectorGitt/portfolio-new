@@ -27,7 +27,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const OurWork = () => {
-	const [element1, controls1] = useScroll();
 	const [element2, controls2] = useScroll();
 	const [element3, controls3] = useScroll();
 	const [element4, controls4] = useScroll();
