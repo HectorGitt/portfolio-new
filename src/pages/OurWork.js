@@ -7,7 +7,6 @@ import softplayer from "../images/projects/softplayer.png";
 import dropmint from "../images/projects/dropmint.png";
 import outlook from "../images/projects/outlook.png";
 import dashboard from "../images/projects/dashboard.png";
-import cardanogpt from "../images/projects/cardanogpt.png";
 import datcaptures from "../images/projects/datcaptures.png";
 import getlinked from "../images/projects/getlinked.png";
 import adacubator from "../images/projects/adacubator.png";
@@ -15,6 +14,7 @@ import hypertrove from "../images/projects/hypertrove.png";
 import defimentum from "../images/projects/defimentum.png";
 import copernican from "../images/projects/copernican.png";
 import codeity from "../images/projects/codeity.png";
+import closetic from "../images/projects/closetic.png";
 
 //animation
 import { motion } from "framer-motion";
@@ -40,6 +40,7 @@ const OurWork = () => {
 	const [element11, controls11] = useScroll();
 	const [element12, controls12] = useScroll();
 	const [element13, controls13] = useScroll();
+	const [element14, controls14] = useScroll();
 	const cleanHost = window.location.host.replace(/^www\./, "");
 	return (
 		<WorkStyle
@@ -49,6 +50,66 @@ const OurWork = () => {
 			exit="exit"
 		>
 			<ScrollTop />
+
+			{/* Closetic - AI Wardrobe Platform */}
+			<MovieStyle
+				ref={element14}
+				variants={fade}
+				animate={controls14}
+				initial="hidden"
+			>
+				<h2>Closetic</h2>
+				<motion.p variants={fade}>
+					A Fashion AI Agent built with React, TypeScript, and
+					FastAPI. Features Google Calendar integration, subscription
+					payments, and an OpenAI Realtime API voice stylist agent for
+					personalized fashion recommendations.
+				</motion.p>
+				<motion.div variants={lineAnim} className="line"></motion.div>
+				<img src={closetic} alt="Closetic AI Wardrobe Platform" />
+				<Buttons>
+					<a
+						target="__blank"
+						href="https://github.com/HectorGitt/closetic"
+					>
+						Check Code
+					</a>
+					<a target="__blank" href={`https://closetic.com`}>
+						Preview Live
+					</a>
+				</Buttons>
+			</MovieStyle>
+
+			{/* Copernican - 3D Solar System Viewer */}
+			<MovieStyle
+				ref={element12}
+				variants={fade}
+				animate={controls12}
+				initial="hidden"
+			>
+				<h2>Copernican</h2>
+				<motion.p variants={fade}>
+					Copernican is a 3D solar system viewer simulating planetary
+					orbits, sunlight dynamics, and natural events using NASA's
+					EONET API.
+				</motion.p>
+				<motion.div variants={lineAnim} className="line"></motion.div>
+				<img src={copernican} alt="copernican homepage" />
+				<Buttons>
+					<a
+						target="__blank"
+						href="https://github.com/HectorGitt/copernican"
+					>
+						Check Code
+					</a>
+					<a
+						target="__blank"
+						href={`https://copernican.${cleanHost}`}
+					>
+						Preview Live
+					</a>
+				</Buttons>
+			</MovieStyle>
 
 			{/* Codeity - Security Scanner */}
 			<MovieStyle
@@ -74,7 +135,10 @@ const OurWork = () => {
 					>
 						Check Code
 					</a>
-					<a target="__blank" href="https://codeity.onrender.com">
+					<a
+						target="__blank"
+						href="https://codeity-xitpm3gava-uc.a.run.app/"
+					>
 						Preview Live
 					</a>
 				</Buttons>
@@ -129,34 +193,6 @@ const OurWork = () => {
 					<a
 						target="__blank"
 						href={`https://datcaptures.${cleanHost}`}
-					>
-						Preview Live
-					</a>
-				</Buttons>
-			</MovieStyle>
-			<MovieStyle
-				ref={element1}
-				variants={fade}
-				animate={controls1}
-				initial="hidden"
-			>
-				<h2>CardanoGPT</h2>
-				<motion.p variants={fade}>
-					A React-based page, leveraging Styled Components, to enhance
-					user engagement and drive traffic for a Web3 Solution.
-				</motion.p>
-				<motion.div variants={lineAnim} className="line"></motion.div>
-				<img src={cardanogpt} alt="cardanogpt homepage" />
-				<Buttons>
-					<a
-						target="__blank"
-						href="https://github.com/HectorGitt/CardanoGPT"
-					>
-						Check Code
-					</a>
-					<a
-						target="__blank"
-						href={`https://cardanogpt.${cleanHost}`}
 					>
 						Preview Live
 					</a>
@@ -242,37 +278,6 @@ const OurWork = () => {
 					<a
 						target="__blank"
 						href={`https://defimentum.${cleanHost}`}
-					>
-						Preview Live
-					</a>
-				</Buttons>
-			</MovieStyle>
-
-			{/* Copernican card inserted after Defimentum */}
-			<MovieStyle
-				ref={element12}
-				variants={fade}
-				animate={controls12}
-				initial="hidden"
-			>
-				<h2>Copernican</h2>
-				<motion.p variants={fade}>
-					Copernican is a 3D solar system viewer simulating planetary
-					orbits, sunlight dynamics, and natural events using NASA’s
-					EONET API.
-				</motion.p>
-				<motion.div variants={lineAnim} className="line"></motion.div>
-				<img src={copernican} alt="copernican homepage" />
-				<Buttons>
-					<a
-						target="__blank"
-						href="https://github.com/HectorGitt/copernican"
-					>
-						Check Code
-					</a>
-					<a
-						target="__blank"
-						href={`https://copernican.${cleanHost}`}
 					>
 						Preview Live
 					</a>
