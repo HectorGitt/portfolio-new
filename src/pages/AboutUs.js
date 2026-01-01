@@ -4,6 +4,7 @@ import EducationSection from "../components/EducationSection";
 import FaqSection from "../components/FaqSection";
 import ServicesSection from "../components/ServicesSection";
 import WorkExperienceSection from "../components/WorkExperienceSection";
+import BlogSection from "../components/BlogSection";
 import { motion } from "framer-motion";
 import { pageAnime } from "../animation";
 import ScrollTop from "../components/ScrollTop";
@@ -22,6 +23,7 @@ const AboutUs = () => {
 			<EducationSection />
 			<WorkExperienceSection />
 			<ServicesSection />
+			<BlogSection />
 			<FaqSection />
 		</motion.div>
 	);
