@@ -54,10 +54,15 @@ const AboutSection = () => {
 };
 
 const About = styled(motion.div)`
-	padding: 5rem 5rem;
+	min-height: 50vh;
+	display: block;
+	width: 100%;
+	padding: 5rem 10rem;
 	color: white;
 	background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
 	position: relative;
+	text-align: center;
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -79,7 +84,7 @@ const About = styled(motion.div)`
 	}
 
 	.description {
-		max-width: 1200px;
+		width: 100%;
 		margin: 0 auto;
 		z-index: 2;
 		position: relative;
@@ -94,6 +99,7 @@ const About = styled(motion.div)`
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		text-align: center;
+		display: inline-block;
 
 		@media (max-width: 900px) {
 			font-size: 2.2rem;
@@ -102,17 +108,20 @@ const About = styled(motion.div)`
 	}
 
 	p {
-		padding: 3rem 0rem;
+		padding: 2rem 0rem;
 		color: #ccc;
 		font-size: 1.2rem;
-		line-height: 150%;
-		text-align: justify;
+		line-height: 1.8;
+		text-align: center;
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
 	@media (max-width: 900px) {
 		padding: 3rem 2rem;
 		p {
 			padding: 1rem 0rem;
+			text-align: justify;
 		}
 	}
 `;
