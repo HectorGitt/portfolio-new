@@ -1,4 +1,5 @@
 import AboutSection from "../components/AboutSection";
+import HeroSection from "../components/HeroSection";
 import EducationSection from "../components/EducationSection";
 import FaqSection from "../components/FaqSection";
 import ServicesSection from "../components/ServicesSection";
@@ -16,6 +17,7 @@ const AboutUs = () => {
 			exit="exit"
 		>
 			<ScrollTop />
+			<HeroSection />
 			<AboutSection />
 			<EducationSection />
 			<WorkExperienceSection />
