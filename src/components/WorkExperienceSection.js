@@ -1,113 +1,161 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useScroll } from "./useScroll";
-import { scrollReveal } from "../animation";
 
 const WorkExperienceSection = () => {
-	const [element, controls] = useScroll();
 	return (
-		<WorkExperience
-			variants={scrollReveal}
-			animate={controls}
-			initial="hidden"
-			ref={element}
-		>
+		<WorkExperience>
 			<div className="container">
-				<motion.h2
-					initial={{ opacity: 0, y: 50 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-				>
+				<motion.h2>
 					Work <span>Experience</span>
 				</motion.h2>
 
 				<ExperienceGrid>
-					<ExperienceCard
-						initial={{ opacity: 0, x: -50 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.6, delay: 0.2 }}
-					>
+					<ExperienceCard>
 						<CompanyHeader>
 							<CompanyName>PEEPALYTICS, AI</CompanyName>
-							<Position>
-								FULLSTACK DEVOPS ENGINEER (Founding Engineer /
-								Acting CTO)
-							</Position>
+							<Position>Remote CTO (Founding Engineer)</Position>
 							<Date>June 2024 - Present</Date>
 						</CompanyHeader>
 						<Responsibilities>
 							<li>
-								Orchestrated API Workflow and Specification
-								using Django and FastAPI
+								Orchestrated high-performance API workflows
+								using Django and FastAPI, integrating robust
+								backend specifications with Next.js frontend
+								controller logic for complex data
+								visualizations.
 							</li>
 							<li>
-								Supported development of Frontend Controller
-								logic for Network and Data Visualization
-								(NextJS)
+								Supervised the optimization of Airflow and Kafka
+								pipelines, achieving a 60x reduction in
+								processing time and significantly decreasing
+								memory consumption.
 							</li>
 							<li>
-								Developed a Rag Implementation using Vector
-								Database
+								Engineered a 98.7% reduction in data processing
+								latency, slashing Neo4j and Pandas execution
+								times from 2 hours down to 90 seconds.
 							</li>
 							<li>
-								Database Management (Postgres, Neo4j, Vector DB,
-								Timeseries DB)
+								Directed the deployment and scaling of cloud
+								infrastructure across AWS (Lambda, EC2, ECR, S3)
+								and Render, utilizing Docker for
+								containerization.
 							</li>
 							<li>
-								Managed Deployment using Docker, Render and AWS
-								Services (Lambda, API Gateway, EC2, ECR, ELB,
-								S3, Bedrock, Sagemaker, Cloudwatch etc)
+								Optimized cloud expenditure by monitoring
+								service metrics and implementing a usage-based
+								tiering system to reduce deployment costs.
 							</li>
 							<li>
-								AI Bot Development for social platforms like
-								Slack and WhatsApp
+								Architected advanced AI solutions, including RAG
+								implementations with Vector Databases and ETL
+								pipelines for the Model Context Protocol (MCP).
 							</li>
 							<li>
-								Development of ETL implementation for MCP (Model
-								Context Protocol)
+								Managed a polyglot database environment,
+								ensuring high availability and performance
+								across Postgres, Neo4j, Weaviate, and
+								Time-series databases.
+							</li>
+							<li>
+								Developed and integrated intelligent automation
+								bots for Slack and WhatsApp using AWS Bedrock
+								and SageMaker.
+							</li>
+							<li>
+								Doubled team collaboration efficiency and
+								ensured 99.9% service reliability by resolving
+								critical development blockers and deployment
+								bugs.
 							</li>
 						</Responsibilities>
 					</ExperienceCard>
 
-					<ExperienceCard
-						initial={{ opacity: 0, x: 50 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.6, delay: 0.4 }}
-					>
+					<ExperienceCard>
 						<CompanyHeader>
-							<CompanyName>FOREON NETWORK, WEB3</CompanyName>
-							<Position>Frontend Developer</Position>
-							<Date>March 2023 - May 2024</Date>
+							<CompanyName>STEALTH NETWORK, WEB3</CompanyName>
+							<Position>Remote Frontend Engineer</Position>
+							<Date>Mar 2023 - Oct 2024</Date>
 						</CompanyHeader>
 						<Responsibilities>
 							<li>
-								Converted designs and wireframes into
-								interactive, user-friendly web interfaces
+								Transformed complex wireframes and designs into
+								high-fidelity, interactive web interfaces with a
+								focus on intuitive user experience.
 							</li>
 							<li>
-								Ensured layouts adapt seamlessly across
-								different screen sizes and devices
+								Engineered fluid, responsive layouts ensuring
+								seamless functionality and visual consistency
+								across all device types and screen resolutions.
 							</li>
 							<li>
-								Enhanced page speed and responsiveness by
-								implementing best performance practices
+								Optimized front-end performance, implementing
+								best practices in asset loading and rendering to
+								significantly enhance page speed and
+								responsiveness.
 							</li>
 							<li>
-								Ensured the application works smoothly on major
-								browsers (Chrome, Firefox, Safari, etc.)
-							</li>
-							<li>
-								Built reusable and modular UI components for
-								scalability and maintainability
+								Architected a library of reusable UI components,
+								promoting code modularity, long-term
+								maintainability, and accelerated development
+								cycles.
 							</li>
 						</Responsibilities>
 					</ExperienceCard>
 
-					<ExperienceCard
-						initial={{ opacity: 0, x: -50 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.6, delay: 0.6 }}
-					>
+					<ExperienceCard>
+						<CompanyHeader>
+							<CompanyName>STITCH TECHNOLOGIES</CompanyName>
+							<Position>Remote Full stack Engineer</Position>
+							<Date>Mar 2022 - Sept 2023</Date>
+						</CompanyHeader>
+						<Responsibilities>
+							<li>
+								AI-Driven Social Automation: Designed and built
+								intelligent bots for Twitter and Discord by
+								seamlessly integrating sophisticated social
+								network APIs with backend logic in order to
+								automate user interactions.
+							</li>
+							<li>
+								Scalable Sweepstake Ecosystem Development:
+								Designed and managed a sweepstakes system with
+								heavy traffic using the Django framework,
+								incorporating effective database designs to
+								sustain activity from a huge number of
+								participants.
+							</li>
+							<li>
+								Engineered Identity & Access Management (IAM):
+								Developed and implemented secure IAM
+								functionality with Flask, creating a structured
+								authentication and authorization framework to
+								safeguard confidential user information.
+							</li>
+							<li>
+								Improved Data Security & Cryptography:
+								Implemented industry-standard hashing and
+								encryption algorithms to protect data both at
+								rest and in transit, meeting audit requirements.
+							</li>
+							<li>
+								Automated Multi-Stage Workflows: Created complex
+								automated workflows using tools such as
+								Selenium, Celery, and Redis, using CronJobs to
+								remove the need for any manual operations in the
+								system.
+							</li>
+							<li>
+								Cloud-Native Orchestration: Containerized
+								microservices through Docker and Kubernetes,
+								along with orchestration for quick deployment
+								and ability to achieve high availability through
+								AWS infrastructure.
+							</li>
+						</Responsibilities>
+					</ExperienceCard>
+
+					<ExperienceCard>
 						<CompanyHeader>
 							<CompanyName>TRIBINNOV AFRICA</CompanyName>
 							<Position>SOFTWARE ENGINEER</Position>
@@ -129,6 +177,37 @@ const WorkExperienceSection = () => {
 							<li>
 								Wrote clean, maintainable, and well-tested code
 								using JavaScript frontend framework React
+							</li>
+						</Responsibilities>
+					</ExperienceCard>
+
+					<ExperienceCard>
+						<CompanyHeader>
+							<CompanyName>MAJESTIK LTD</CompanyName>
+							<Position>Remote Programming Tutor</Position>
+							<Date>Oct 2021 - July 2023</Date>
+						</CompanyHeader>
+						<Responsibilities>
+							<li>
+								Mentored peers and students in C and Java,
+								breaking down complex low-level concepts like
+								memory management, pointers, and Object-Oriented
+								Programming (OOP) to build strong computer
+								science foundations.
+							</li>
+							<li>
+								Instructed on Database Design and Architecture
+								(MySQL), teaching the principles of schema
+								normalization, SQL optimization, and relational
+								data modeling to ensure efficient backend
+								performance.
+							</li>
+							<li>
+								Delivered full-stack development curriculum
+								(Python, PHP), guiding learners from basic
+								syntax to building functional web applications,
+								emphasizing clean code practices and system
+								integration.
 							</li>
 						</Responsibilities>
 					</ExperienceCard>
