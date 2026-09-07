@@ -1,19 +1,32 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { hydrate, render } from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { markHydratedFromStatic } from "./prerender";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+const root = document.getElementById("root");
+
+const tree = (
+	<React.StrictMode>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+/**
+ * react-snap writes real markup into #root at build time, so in the browser we
+ * hydrate that instead of throwing it away and re-rendering. If the element is
+ * empty (dev server, or a build without the prerender step) we render normally.
+ */
+if (root.hasChildNodes()) {
+	// Flag this before rendering: the motion hooks read it during the first
+	// render to decide whether anything should animate in.
+	markHydratedFromStatic();
+	hydrate(tree, root);
+} else {
+	render(tree, root);
+}
+
 reportWebVitals();

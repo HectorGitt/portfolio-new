@@ -1,17 +1,29 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, useReducedMotion } from "framer-motion";
+import { isPrerendering, isHydratedFromStatic } from "../prerender";
 
 /**
  * Whether a component should skip its entrance animation and start finished.
  *
- * Framer Motion drives these in JavaScript, so the reduced-motion rule in
- * GlobalStyle cannot reach them. When the visitor asks for less movement we
- * show the section immediately instead of animating it in.
+ * Three cases, one answer:
+ *  - the visitor asked for reduced motion;
+ *  - react-snap is capturing static HTML, where an entrance state would be
+ *    serialised as permanently invisible content;
+ *  - the visitor loaded that static HTML, which has already painted.
+ *
+ * That last case is a deliberate trade. Production builds are prerendered, so
+ * the scroll reveals do not play there: the page arrives fully readable instead
+ * of animating in. Replaying entrances after hydration would blank out content
+ * the reader can already see, and for a CV that someone opens to skim, being
+ * legible immediately beats being animated. The reveals still run on the dev
+ * server and on any build without the prerender step.
  */
 export const useMotionStart = () => {
 	const reduceMotion = useReducedMotion();
-	return reduceMotion ? "show" : "hidden";
+	return reduceMotion || isPrerendering || isHydratedFromStatic()
+		? "show"
+		: "hidden";
 };
 
 /**
@@ -21,9 +33,6 @@ export const useMotionStart = () => {
  * trigger on first contact rather than waiting to be a fifth visible, and the
  * negative bottom margin holds the reveal until the section is properly on
  * screen. Anyone scrolling quickly still lands on rendered content.
- *
- * Returns the `initial` variant alongside the ref and controls, so callers get
- * the reduced-motion handling without repeating it.
  */
 export const useScroll = () => {
 	const controls = useAnimation();
