@@ -11,6 +11,10 @@ import hypertrove from "../images/projects/hypertrove.webp";
 import outlook from "../images/projects/outlook.webp";
 import adacubator from "../images/projects/adacubator.webp";
 import avera from "../images/projects/avera.webp";
+import eaglesight from "../images/projects/eaglesight.webp";
+import locus from "../images/projects/locus.webp";
+import enzo from "../images/projects/enzo.webp";
+import whisperer from "../images/projects/whisperer.webp";
 import softplayer from "../images/projects/softplayer.webp";
 import streamlab from "../images/projects/streamlab.webp";
 
@@ -40,7 +44,7 @@ export const selected = [
 		kind: "Fleet logistics & diagnostics engine",
 		discipline: "or",
 		year: "2025",
-		image: null,
+		image: eaglesight,
 		summary:
 			"A scheduling engine for the Tractor-on-the-Go ecosystem. It solves vehicle routing problems with time windows using linear and mixed-integer programming to minimise fuel cost, then runs a second, physical model on top: a fluid-mechanics diagnostic that correlates live location against telemetry to predict engine breakdown before it strands a machine mid-operation.",
 		method: [
@@ -67,7 +71,7 @@ export const selected = [
 		kind: "Distributed multi-agent routing system",
 		discipline: "ai",
 		year: "2025",
-		image: null,
+		image: locus,
 		summary:
 			"A distributed AI system built on Google's Agent Development Kit. One orchestrator delegates to seven specialised agents — navigator, weather, environmental hazards, language, explorer, search and wardrobe — each holding a single competence, so a plan is assembled from independent judgements rather than one model guessing at everything. Built as a demonstration that autonomous dispatch decomposes cleanly.",
 		method: [
@@ -148,7 +152,7 @@ export const selected = [
 		kind: "Zero-touch career copilot",
 		discipline: "ai",
 		year: "2025",
-		image: null,
+		image: enzo,
 		summary:
 			"A career management platform that ingests GitHub webhooks in real time and keeps a resume and portfolio current without being asked. An agentic RAG system on Gemini 2.5 Flash reads commit history and applies semantic filtering to separate low-impact noise from work that is actually worth claiming. It answers questions over that history in conversation, and publishes the result as a profile page with the highlights already written up.",
 		method: [
@@ -268,7 +272,7 @@ export const archive = [
 		name: "Whisperer",
 		kind: "Horror reader on a phosphor-terminal interface, with blur-on-idle text, a curator console and toggles for motion, blur and narration",
 		discipline: "ai",
-		image: null,
+		image: whisperer,
 		stack: ["Kiro", "JavaScript", "Speech synthesis"],
 		links: [
 			{
