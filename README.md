@@ -1,70 +1,164 @@
-# Getting Started with Create React App
+# Olaitan Adeniyi — portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A portfolio aimed at two readers at once: graduate admissions committees, and
+engineering teams hiring into visa-sponsored roles. Each gets its own route and
+its own document, from one shared set of facts.
 
-## Available Scripts
+## Design
 
-In the project directory, you can run:
+The site is laid out as an engineering drawing sheet. That is not decoration —
+it comes from the subject. The work being presented is measured work (a CGPA to
+two decimals, a 98.7% latency reduction, course scores out of 100), so every
+claim is presented the way an instrument presents a reading: a value, a unit,
+and the source it came from.
 
-### `npm start`
+- **Hero** is a drawing *title block* — the panel in the corner of every
+  engineering sheet stating who drew it, what it is, and its status. Here the
+  status cell carries work authorisation, which is the first thing both
+  audiences need to know.
+- **Palette** is drawing-office stock: cool vellum paper, graphite rules,
+  blueprint ink for structure. The survey-flag orange is reserved exclusively
+  for measured values — if it is orange, it is a number with a source.
+- **Type** pairs `Archivo` (engineered grotesque, uppercase) for headings with
+  `Source Serif 4` for prose and `IBM Plex Mono` with tabular figures for all
+  data. The drawing and the thesis, which is the argument the site is making.
+- **Motion** is restrained. Page transitions never animate opacity, and the
+  hero readings move without fading, so a throttled or interrupted animation
+  can never leave a visitor on an invisible page. `prefers-reduced-motion` is
+  honoured in JavaScript as well as CSS.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Content lives in one place
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+All facts are in `src/content/` and nothing else hard-codes them:
 
-### `npm test`
+| File | Holds |
+| --- | --- |
+| `profile.js` | Identity, availability, hero readings, positioning, roles, field practice, teaching |
+| `academic.js` | Degree, transcript scores, awards, certifications, memberships, research tracks |
+| `projects.js` | Selected systems, archive, writing, skills inventory |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`src/theme.js` holds the design tokens. Update those two places and the whole
+site follows.
 
-### `npm run build`
+### Keeping it truthful
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Everything on the site traces to `src/file/Olaitan_Adeniyi_Software_Resume.pdf`
+or `src/file/Olaitan_Adeniyi_Academic_CV.pdf`. When either PDF changes, update
+the matching entry in `src/content/` in the same commit, and bump
+`availability.revision` — it is printed in the title block and the footer.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Routes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Path | For |
+| --- | --- |
+| `/` | Both — title block, positioning, selected work, career log, writing |
+| `/engineering` | Hiring — 19 systems, filterable by discipline, plus the skills inventory |
+| `/research` | Supervisors — research tracks, degree record, transcript, awards, teaching |
+| `/contact` | Both — channels, eligibility, and both documents |
 
-### `npm run eject`
+Every page is built to be shared on its own, so none of them number themselves
+as part of a set or refer to the others to make sense. `/research` goes furthest:
+it opens with its own identity strip (name, degree class, academic email) and
+closes with a supervision-enquiry block, because it gets pasted into cold emails
+where it is the only thing a supervisor sees. `usePageMeta` sets the document
+title and description per route for the same reason.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Prerendering & SEO
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm run build` runs `react-snap` as a `postbuild` step, which loads each route
+in a headless browser and writes real static HTML to `build/<route>/index.html`.
+This matters because these links are *sent*, not found: LinkedIn, Slack,
+WhatsApp, X and most AI crawlers never execute JavaScript, so without it every
+route previewed as the homepage.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`src/index.js` therefore calls `hydrate()` when `#root` already has markup, and
+`render()` when it does not (dev server).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Motion interacts with this, carefully.** `src/prerender.js` exposes two
+states, and `useMotionStart` in `useScroll.js` reads both:
 
-## Learn More
+- *During* prerendering, entrance variants must not be captured — an `opacity: 0`
+  serialised into the static HTML would hand crawlers a page of invisible
+  content. Verify after any motion change: `grep -c 'opacity:0' build/research/index.html`
+  must be `0`.
+- *After* hydrating that HTML, entrances are skipped too. The page has already
+  painted, so animating from invisible would blank out what the reader can
+  see. The trade is that scroll reveals do not play in production; the page
+  arrives fully readable instead. They still run on the dev server.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Also in place: per-route `<title>`, description, canonical and Open Graph tags
+(`usePageMeta`); a JSON-LD `Person` block in the static HTML; `sitemap.xml`
+referenced from `robots.txt`; and absolute `og:image` URLs, which LinkedIn and X
+require — a relative path silently yields a card with no image.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project screenshots are WebP at 1200px (10.5 MB of PNGs became 507 KB). Measured
+CLS on the prerendered build is 0.
 
-### Code Splitting
+## Running it
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+npm start
+```
 
-### Analyzing the Bundle Size
+Dev server settings live in `.env.local` (port and browser behaviour); it is
+not committed. Production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run build
+```
 
-### Making a Progressive Web App
+`homepage` is `/`, so assets resolve absolutely and deep links such as
+`/research/` work. `public/_redirects` and `netlify.toml` both route all paths
+to `index.html` for client-side routing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The stack is Create React App 4 on React 17, with styled-components and Framer
+Motion 4. CRA 4 runs on webpack 4, so both scripts pass
+`--openssl-legacy-provider` for Node 17 and later — do not remove that flag
+without upgrading the toolchain.
 
-### Advanced Configuration
+`react-snap` pulls in Puppeteer, so `npm install` downloads a Chromium build.
+To skip prerendering temporarily, run `react-scripts build` directly rather than
+`npm run build`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Deploying
 
-### Deployment
+Build settings live in `netlify.toml`, not the Netlify UI, so they are versioned.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The one setting that matters is `NODE_VERSION`. Both npm scripts pass
+`--openssl-legacy-provider`, which webpack 4 needs under OpenSSL 3 — and that
+flag only exists from Node 17. Netlify's default is Node 16, which rejects it
+with `bad option` and fails the build. The version pin and the flag only work as
+a pair: do not change one without the other.
 
-### `npm run build` fails to minify
+Prerendering is deliberately non-fatal. `postbuild` is `react-snap || echo ...`,
+so if headless Chromium fails in CI the site still deploys — client-rendered,
+with `PRERENDER FAILED` in the build log. A portfolio that deploys without
+static HTML beats one that does not deploy. Check the build log for that string
+after any deploy; if it appears, every route shipped as the empty CRA shell and
+the SEO work above is inert.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Do not set `NODE_ENV=production` in the Netlify environment. It makes Netlify
+skip `devDependencies`, and `react-snap` is one — prerendering would stop
+without any other symptom.
+
+## Screenshots still needed
+
+Five projects render a hatched "plot pending" cell instead of a screenshot,
+because no real image exists for them. Add a WebP (or PNG) to `src/images/projects/`,
+import it at the top of `src/content/projects.js`, and set it on the entry:
+
+- EagleSight — <https://eaglesight.deniyi.link/>
+- Locus — <https://locus-agent-service-380433705339.us-central1.run.app/>
+- Enzo — <https://enzo.stabilty.com/>
+- WatchWay — <https://watchway.stabilty.com/>
+- Whisperer — no live deployment
+
+## Links deliberately omitted
+
+Three links from the previous site were dead and have been dropped rather than
+shipped broken. Restore them when the underlying service returns:
+
+- Codeity live demo — the Cloud Run deployment 404s
+- Closetic source — the repository is private, so it 404s for visitors
+- Hypertrove live demo — `hypertrove.deniyi.link` no longer resolves

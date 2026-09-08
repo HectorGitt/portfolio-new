@@ -1,171 +1,156 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
-import ham from "../images/icon/nav.svg";
-import times from "../images/icon/times.svg";
 import { useState } from "react";
-import { AnimateSharedLayout } from "framer-motion";
+import styled from "styled-components";
+import { Link, useLocation } from "react-router-dom";
+import { identity } from "../content/profile";
+import { color, font, size, bp } from "../theme";
+
+const routes = [
+	{ to: "/", label: "Overview" },
+	{ to: "/engineering", label: "Engineering" },
+	{ to: "/research", label: "Research" },
+	{ to: "/contact", label: "Contact" },
+];
+
 const Nav = () => {
 	const { pathname } = useLocation();
-	const [nav, setNav] = useState(false);
-	const toggleNav = () => {
-		setNav(!nav);
-	};
-	const closeNav = () => {
-		setNav(false);
-	};
+	const [open, setOpen] = useState(false);
+	const close = () => setOpen(false);
+
 	return (
-		<NavStyle>
-			<h1>
-				<Link to="/" id="logo" onClick={closeNav}>
-					Portfolio
-				</Link>
-			</h1>
-			<motion.img
-				layout
-				src={!nav ? ham : times}
-				onClick={toggleNav}
-				alt="harmburger"
-			/>
-			<AnimateSharedLayout>
-				<motion.ul layout className={nav ? "mobile" : ""}>
-					<li>
-						<Link to="/" onClick={closeNav}>
-							1. About
-						</Link>
-						<Line
-							transition={{ duration: 0.75 }}
-							initial={{ width: "0%" }}
-							animate={{ width: pathname === "/" ? "80%" : "0%" }}
-						/>
-					</li>
-					<li>
-						<Link to="/work" onClick={closeNav}>
-							2. My Work
-						</Link>
-						<Line
-							transition={{ duration: 0.75 }}
-							initial={{ width: "0%" }}
-							animate={{
-								width: pathname === "/work" ? "80%" : "0%",
-							}}
-						/>
-					</li>
-					<li>
-						<Link to="/contact" onClick={closeNav}>
-							3. Contact Us
-						</Link>
-						<Line
-							transition={{ duration: 0.75 }}
-							initial={{ width: "0%" }}
-							animate={{
-								width: pathname === "/contact" ? "80%" : "0%",
-							}}
-						/>
-					</li>
-				</motion.ul>
-			</AnimateSharedLayout>
-		</NavStyle>
+		<Bar>
+			<Inner>
+				<Mark to="/" onClick={close}>
+					{identity.shortName}
+					<MarkNote>{identity.site}</MarkNote>
+				</Mark>
+
+				<Toggle
+					onClick={() => setOpen((v) => !v)}
+					aria-expanded={open}
+					aria-label={open ? "Close menu" : "Open menu"}
+				>
+					{open ? "Close" : "Menu"}
+				</Toggle>
+
+				<Links $open={open}>
+					{routes.map((r) => (
+						<li key={r.to}>
+							<NavLink
+								to={r.to}
+								onClick={close}
+								$active={pathname === r.to}
+								aria-current={pathname === r.to ? "page" : undefined}
+							>
+								{r.label}
+							</NavLink>
+						</li>
+					))}
+				</Links>
+			</Inner>
+		</Bar>
 	);
 };
 
-const NavStyle = styled.nav`
-	min-height: 10vh;
-	display: flex;
-	margin: auto;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 5rem;
-	background: rgba(15, 15, 35, 0.95);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+const Bar = styled.nav`
 	position: sticky;
 	top: 0;
-	z-index: 3;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-	a {
-		color: #e2e8f0;
-		text-decoration: none;
-		transition: all 0.3s ease;
-		&:hover {
-			color: #00d4ff;
-		}
-	}
-	@media (max-width: 900px) {
-		padding: 1rem 2rem;
-	}
-	ul {
-		display: flex;
-		list-style: none;
-		width: 30rem;
-		justify-content: space-between;
-		@media (max-width: 900px) {
-			display: none;
-		}
-	}
-	ul.mobile {
-		@media (max-width: 900px) {
-			display: grid;
-			flex-direction: column;
-			position: fixed;
-			top: 10vh;
-			left: 0;
-			height: 50vh;
-			background: rgba(15, 15, 35, 0.98);
-			backdrop-filter: blur(15px);
-			-webkit-backdrop-filter: blur(15px);
-			width: 100vw;
-			border-top: 1px solid rgba(0, 212, 255, 0.1);
-			li {
-				padding: 20px;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-				&:hover {
-					background: rgba(0, 212, 255, 0.05);
-				}
-			}
-		}
-	}
-	li {
-		position: relative;
-	}
+	z-index: 20;
+	background: ${color.vellum};
+	border-bottom: 1px solid ${color.ink};
+`;
 
-	#logo {
-		font-size: 1.8rem;
-		font-weight: 700;
-		background: linear-gradient(135deg, #00d4ff 0%, #23d997 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		letter-spacing: -0.5px;
-	}
-	img {
-		display: none;
-		width: 30px;
-		cursor: pointer;
-		filter: brightness(0) invert(1);
-		transition: all 0.3s ease;
-		&:hover {
-			filter: brightness(0) invert(1) sepia(1) saturate(5)
-				hue-rotate(150deg);
-		}
-		@media (max-width: 900px) {
-			display: grid;
-		}
+const Inner = styled.div`
+	max-width: ${size.page};
+	margin: 0 auto;
+	padding: 0 ${size.gutter};
+	min-height: 4.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+
+	${bp.md} {
+		padding: 0 ${size.gutterSm};
+		min-height: 3.75rem;
+		flex-wrap: wrap;
 	}
 `;
-const Line = styled(motion.div)`
-	height: 0.3rem;
-	background: linear-gradient(135deg, #00d4ff 0%, #23d997 100%);
-	width: 0%;
-	position: absolute;
-	bottom: -80%;
-	left: 20%;
-	border-radius: 2px;
-	box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-	@media (max-width: 900px) {
-		bottom: 30%;
+
+const Mark = styled(Link)`
+	font-family: ${font.display};
+	font-size: 1.02rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
+	color: ${color.ink};
+	display: flex;
+	align-items: baseline;
+	gap: 0.7rem;
+`;
+
+const MarkNote = styled.span`
+	font-family: ${font.data};
+	font-size: 0.6rem;
+	font-weight: 400;
+	letter-spacing: 0.16em;
+	text-transform: lowercase;
+	color: ${color.graphite};
+
+	${bp.sm} {
+		display: none;
+	}
+`;
+
+const Toggle = styled.button`
+	display: none;
+	font-family: ${font.data};
+	font-size: 0.68rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	border: 1px solid ${color.rule};
+	padding: 0.45rem 0.8rem;
+
+	${bp.md} {
+		display: block;
+	}
+`;
+
+const Links = styled.ul`
+	display: flex;
+	gap: 2rem;
+
+	${bp.md} {
+		display: ${(p) => (p.$open ? "flex" : "none")};
+		flex-direction: column;
+		width: 100%;
+		gap: 0;
+		border-top: 1px solid ${color.rule};
+		padding: 0.35rem 0 0.75rem;
+	}
+`;
+
+const NavLink = styled(Link)`
+	font-family: ${font.data};
+	font-size: 0.72rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: ${(p) => (p.$active ? color.ink : color.graphite)};
+	padding: 0.35rem 0;
+	display: block;
+	border-bottom: 1px solid
+		${(p) => (p.$active ? color.signal : "transparent")};
+	transition: color 0.18s ease, border-color 0.18s ease;
+
+	&:hover {
+		color: ${color.ink};
+	}
+
+	${bp.md} {
+		padding: 0.75rem 0;
+		border-bottom: none;
+		border-left: 2px solid
+			${(p) => (p.$active ? color.signal : "transparent")};
+		padding-left: ${(p) => (p.$active ? "0.75rem" : "0.75rem")};
 	}
 `;
 

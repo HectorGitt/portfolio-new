@@ -1,4 +1,32 @@
+# Build settings live here rather than in the Netlify UI so they are versioned
+# and reviewable. netlify.toml takes precedence over the UI equivalents.
+
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # Create React App 4 runs on webpack 4, whose md4 hashing was broken by
+  # OpenSSL 3. Both npm scripts pass --openssl-legacy-provider to work around
+  # it, and that flag only exists from Node 17 onwards — Netlify's default
+  # Node 16 rejects it outright with "bad option". Pin a Node that has it.
+  #
+  # Do not lower this below 17 without also removing the flag from both
+  # scripts in package.json, and do not remove the flag without upgrading off
+  # webpack 4. The two settings only work as a pair.
+  NODE_VERSION = "20"
+
+  # react-snap drives headless Chromium; skip the download prompt noise.
+  NPM_CONFIG_LOGLEVEL = "warn"
+
+  # Do NOT set NODE_ENV = "production" here. Netlify skips devDependencies when
+  # it is set, and react-snap lives there — prerendering would stop silently and
+  # every route would ship as the empty CRA shell. Netlify leaves NODE_ENV unset
+  # by default, which is what this build needs.
+
+# Client-side routing: every path serves the SPA shell. Prerendered routes are
+# real files on disk, so they are matched before this rule applies.
 [[redirects]]
   from = "/*"
-  to = "/"
+  to = "/index.html"
   status = 200
