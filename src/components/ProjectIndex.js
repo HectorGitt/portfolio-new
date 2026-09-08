@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import { selected, archive, disciplines } from "../content/projects";
 import { useScroll } from "./useScroll";
 import SheetHead from "./SheetHead";
+import Lightbox from "./Lightbox";
 import { Page, Sheet, Eyebrow, TagRow, Tag, Callout, revealUp, revealStagger } from "./ui";
 import { color, font, bp } from "../theme";
 
 const ProjectIndex = () => {
 	const [filter, setFilter] = useState("all");
+	const [zoomed, setZoomed] = useState(null);
 	const [element, controls, start] = useScroll();
 
 	const shownSelected = useMemo(
@@ -59,7 +61,19 @@ const ProjectIndex = () => {
 							<EntryBody>
 								<PlotCell>
 									{p.image ? (
-										<Shot src={p.image} alt={`${p.name} interface`} loading="lazy" />
+										<ZoomButton
+											type="button"
+											onClick={() =>
+												setZoomed({
+													src: p.image,
+													alt: `${p.name} interface`,
+													caption: p.name,
+												})
+											}
+											aria-label={`View the ${p.name} screenshot full size`}
+										>
+											<Shot src={p.image} alt={`${p.name} interface`} loading="lazy" />
+										</ZoomButton>
 									) : (
 										<PlotPending aria-label="Screenshot not yet on file">
 											<span>Plot pending</span>
@@ -137,6 +151,13 @@ const ProjectIndex = () => {
 				{shownSelected.length === 0 && shownArchive.length === 0 && (
 					<Empty>Nothing on file under that discipline yet.</Empty>
 				)}
+
+				<Lightbox
+					src={zoomed?.src}
+					alt={zoomed?.alt}
+					caption={zoomed?.caption}
+					onClose={() => setZoomed(null)}
+				/>
 			</Page>
 		</Sheet>
 	);
@@ -228,20 +249,49 @@ const PlotCell = styled.div`
 	border-right: 1px solid ${color.rule};
 	background: ${color.sheetSunk};
 	display: flex;
-	align-items: stretch;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
 
 	${bp.lg} {
 		border-right: none;
 		border-bottom: 1px solid ${color.rule};
+		padding: 1.15rem;
 	}
 `;
 
+/** The whole plate is the click target for the full-size view. */
+const ZoomButton = styled.button`
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: zoom-in;
+
+	&:hover img {
+		border-color: ${color.graphite};
+	}
+`;
+
+/**
+ * Screenshots are shown whole rather than cropped to fill. These are interface
+ * captures, and `cover` in a near-square cell was cutting the left and right
+ * thirds off — exactly where sidebars, panels and controls live. The hairline
+ * border mounts the image on the sunken cell like a plate on a drawing sheet.
+ */
 const Shot = styled.img`
 	width: 100%;
-	height: 100%;
-	min-height: 15rem;
-	object-fit: cover;
-	object-position: top center;
+	height: auto;
+	/*
+	 * A fixed plate shape reserves the space before a lazy image loads, so
+	 * nothing shifts underneath the reader. Without it these collapse to zero
+	 * height until they arrive. Captures letterbox inside the plate rather than
+	 * being cropped to fill it.
+	 */
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
+	border: 1px solid ${color.rule};
 `;
 
 /**

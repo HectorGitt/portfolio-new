@@ -15,6 +15,7 @@ import eaglesight from "../images/projects/eaglesight.webp";
 import locus from "../images/projects/locus.webp";
 import enzo from "../images/projects/enzo.webp";
 import whisperer from "../images/projects/whisperer.webp";
+import watchway from "../images/projects/watchway.webp";
 import softplayer from "../images/projects/softplayer.webp";
 import streamlab from "../images/projects/streamlab.webp";
 
@@ -167,16 +168,24 @@ export const selected = [
 	{
 		id: "watchway",
 		name: "WatchWay",
-		kind: "Civic geospatial reporting engine",
+		kind: "Civic infrastructure registry & accountability tracker",
 		discipline: "or",
 		year: "2025",
-		image: null,
+		image: watchway,
 		summary:
-			"A smart-city reporting platform that takes GIS telemetry from citizen reports and ranks infrastructure repairs by hazard severity through a priority-queue algorithm, so municipal crews are dispatched against risk rather than against whoever complained loudest.",
+			"A nationwide crowdsourced registry for the decay of Nigerian federal and state infrastructure, from washouts on the Lagos-Ibadan Expressway to missing manhole covers. Reports arrive as GIS telemetry and are ranked by hazard severity through a priority queue, so crews are dispatched against risk rather than against whoever complained loudest. The other half is public: a per-state tracker scoring safety, resolution rate and average response time, which turns the same data into pressure on the authorities responsible.",
 		method: [
+			{ label: "Input", value: "Crowdsourced reports as GIS telemetry" },
 			{ label: "Ranking", value: "Priority queue keyed on hazard severity" },
-			{ label: "Input", value: "GIS telemetry from civic reports" },
 			{ label: "Output", value: "Ordered municipal resource allocation" },
+			{
+				label: "Workflow",
+				value: "Reports move unverified, verified, fixed, resolved",
+			},
+			{
+				label: "Accountability",
+				value: "Per-state safety score, resolution rate and response time",
+			},
 		],
 		stack: ["TypeScript", "React", "Python", "GIS", "Priority queues"],
 		links: [
@@ -204,22 +213,30 @@ export const selected = [
 		links: [{ label: "Live", href: "https://closetic.com" }],
 	},
 	{
-		id: "codeity",
-		name: "Codeity",
-		kind: "Security vulnerability scanner",
+		id: "whisperer",
+		name: "Whisperer",
+		kind: "Horror reader on a phosphor terminal",
 		discipline: "platform",
 		year: "2025",
-		image: codeity,
+		image: whisperer,
 		summary:
-			"A full-stack scanner on FastAPI that analyses codebases for vulnerabilities and malicious intent across multiple languages, taking either an upload or a GitHub repository as its target.",
+			"A horror story reader built as a CRT terminal — green phosphor, scanlines, monospace throughout. The conceit is that the text blurs while you sit still and sharpens as you read, so the interface behaves like something that does not want to be read carefully. A curator console takes new stories in as PDF, plain text or Markdown, and an optional narrator reads them aloud.",
 		method: [
-			{ label: "Targets", value: "File upload or GitHub repository" },
-			{ label: "Coverage", value: "Multi-language static analysis" },
-			{ label: "Runtime", value: "FastAPI on Cloud Run" },
+			{ label: "Interface", value: "Phosphor CRT styling with blur-on-idle text" },
+			{ label: "Curation", value: "Console ingesting PDF, TXT and Markdown" },
+			{
+				label: "Controls",
+				value: "Toggles for blur, motion, colour theme and narration",
+			},
 		],
-		stack: ["FastAPI", "Python", "Static analysis", "Cloud Run"],
-		// The old Cloud Run deployment is gone (404). Re-add a Live link once redeployed.
-		links: [{ label: "Code", href: "https://github.com/HectorGitt/codeity" }],
+		stack: ["Kiro", "JavaScript", "Speech synthesis"],
+		links: [
+			{ label: "Live", href: "https://whisperer.deniyi.link/" },
+			{
+				label: "Write-up",
+				href: "https://medium.com/@deniyi_dev/whisperer-building-a-horror-story-reader-with-kiro-93c0ce0adb0f",
+			},
+		],
 	},
 ];
 
@@ -269,17 +286,13 @@ export const archive = [
 		],
 	},
 	{
-		name: "Whisperer",
-		kind: "Horror reader on a phosphor-terminal interface, with blur-on-idle text, a curator console and toggles for motion, blur and narration",
-		discipline: "ai",
-		image: whisperer,
-		stack: ["Kiro", "JavaScript", "Speech synthesis"],
-		links: [
-			{
-				label: "Write-up",
-				href: "https://medium.com/@deniyi_dev/whisperer-building-a-horror-story-reader-with-kiro-93c0ce0adb0f",
-			},
-		],
+		name: "Codeity",
+		kind: "Multi-language security scanner taking an upload or a GitHub repository",
+		discipline: "platform",
+		image: codeity,
+		stack: ["FastAPI", "Python", "Static analysis"],
+		// The old Cloud Run deployment is gone (404). Re-add a Live link once redeployed.
+		links: [{ label: "Code", href: "https://github.com/HectorGitt/codeity" }],
 	},
 	{
 		name: "Adacubator",

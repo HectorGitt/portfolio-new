@@ -1,9 +1,11 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { selected, totalProjects } from "../content/projects";
 import { useScroll } from "./useScroll";
 import SheetHead from "./SheetHead";
+import Lightbox from "./Lightbox";
 import { Page, Sheet, TagRow, Tag, revealUp, revealStagger } from "./ui";
 import { color, font, bp } from "../theme";
 
@@ -12,6 +14,7 @@ const featured = selected.slice(0, 3);
 
 const FeaturedWork = () => {
 	const [element, controls, start] = useScroll();
+	const [zoomed, setZoomed] = useState(null);
 
 	return (
 		<Sheet>
@@ -28,7 +31,19 @@ const FeaturedWork = () => {
 						<Card key={p.id} variants={revealUp}>
 							<CardTop>
 								{p.image ? (
-									<Shot src={p.image} alt={`${p.name} interface`} loading="lazy" />
+									<ZoomButton
+										type="button"
+										onClick={() =>
+											setZoomed({
+												src: p.image,
+												alt: `${p.name} interface`,
+												caption: p.name,
+											})
+										}
+										aria-label={`View the ${p.name} screenshot full size`}
+									>
+										<Shot src={p.image} alt={`${p.name} interface`} loading="lazy" />
+									</ZoomButton>
 								) : (
 									<Hatch aria-hidden="true" />
 								)}
@@ -48,6 +63,13 @@ const FeaturedWork = () => {
 				</Grid>
 
 				<AllLink to="/engineering">See all {totalProjects} &rarr;</AllLink>
+
+				<Lightbox
+					src={zoomed?.src}
+					alt={zoomed?.alt}
+					caption={zoomed?.caption}
+					onClose={() => setZoomed(null)}
+				/>
 			</Page>
 		</Sheet>
 	);
@@ -80,13 +102,35 @@ const CardTop = styled.div`
 	border-bottom: 1px solid ${color.rule};
 	height: 11rem;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.9rem;
+`;
+
+const ZoomButton = styled.button`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: zoom-in;
+
+	&:hover img {
+		border-color: ${color.graphite};
+	}
 `;
 
 const Shot = styled.img`
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: top center;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	border: 1px solid ${color.rule};
 `;
 
 const Hatch = styled.div`
