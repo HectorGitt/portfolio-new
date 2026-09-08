@@ -21,7 +21,7 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap || echo \"PRERENDER FAILED - site deployed client-rendered only. Routes will not have static HTML. See README.\""
   },
   "eslintConfig": {
     "extends": [

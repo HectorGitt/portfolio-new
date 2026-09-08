@@ -121,6 +121,27 @@ without upgrading the toolchain.
 To skip prerendering temporarily, run `react-scripts build` directly rather than
 `npm run build`.
 
+## Deploying
+
+Build settings live in `netlify.toml`, not the Netlify UI, so they are versioned.
+
+The one setting that matters is `NODE_VERSION`. Both npm scripts pass
+`--openssl-legacy-provider`, which webpack 4 needs under OpenSSL 3 — and that
+flag only exists from Node 17. Netlify's default is Node 16, which rejects it
+with `bad option` and fails the build. The version pin and the flag only work as
+a pair: do not change one without the other.
+
+Prerendering is deliberately non-fatal. `postbuild` is `react-snap || echo ...`,
+so if headless Chromium fails in CI the site still deploys — client-rendered,
+with `PRERENDER FAILED` in the build log. A portfolio that deploys without
+static HTML beats one that does not deploy. Check the build log for that string
+after any deploy; if it appears, every route shipped as the empty CRA shell and
+the SEO work above is inert.
+
+Do not set `NODE_ENV=production` in the Netlify environment. It makes Netlify
+skip `devDependencies`, and `react-snap` is one — prerendering would stop
+without any other symptom.
+
 ## Screenshots still needed
 
 Five projects render a hatched "plot pending" cell instead of a screenshot,
