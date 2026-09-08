@@ -59,6 +59,7 @@ export const selected = [
 		],
 		stack: ["Python", "OR-Tools", "MIP", "Telemetry", "FastAPI"],
 		links: [
+			{ label: "Code", href: "https://github.com/HectorGitt/eagle-fleet-command" },
 			{ label: "Live", href: "https://eaglesight.deniyi.link/" },
 			{
 				label: "Write-up",
@@ -82,9 +83,14 @@ export const selected = [
 				label: "Agents",
 				value: "navigator, weather, env_hazards, language, explorer, search, wardrobe",
 			},
+			{
+				label: "Services",
+				value: "Directions, Maps, Places, Weather, Air Quality, Translate, Custom Search, Cloud SQL",
+			},
 		],
 		stack: ["Python", "Google ADK", "Multi-agent", "Cloud Run"],
 		links: [
+			{ label: "Code", href: "https://github.com/HectorGitt/Locus" },
 			{
 				label: "Live",
 				href: "https://locus-agent-service-380433705339.us-central1.run.app/",
@@ -163,7 +169,10 @@ export const selected = [
 			{ label: "Output", value: "Conversational answers and a published profile page" },
 		],
 		stack: ["Python", "Gemini 2.5 Flash", "RAG", "Webhooks", "Vector search"],
-		links: [{ label: "Live", href: "https://enzo.stabilty.com/" }],
+		links: [
+			{ label: "Code", href: "https://github.com/HectorGitt/enzo" },
+			{ label: "Live", href: "https://enzo.stabilty.com/" },
+		],
 	},
 	{
 		id: "watchway",
@@ -231,6 +240,7 @@ export const selected = [
 		],
 		stack: ["Kiro", "JavaScript", "Speech synthesis"],
 		links: [
+			{ label: "Code", href: "https://github.com/HectorGitt/Whisperer" },
 			{ label: "Live", href: "https://whisperer.deniyi.link/" },
 			{
 				label: "Write-up",
