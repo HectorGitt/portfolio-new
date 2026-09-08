@@ -45,8 +45,12 @@ export const selected = [
 			"A scheduling engine for the Tractor-on-the-Go ecosystem. It solves vehicle routing problems with time windows using linear and mixed-integer programming to minimise fuel cost, then runs a second, physical model on top: a fluid-mechanics diagnostic that correlates live location against telemetry to predict engine breakdown before it strands a machine mid-operation.",
 		method: [
 			{ label: "Formulation", value: "VRPTW as MIP, solved with Google OR-Tools" },
+			{
+				label: "Constraints",
+				value: "Road distances, time windows and shift capacity",
+			},
 			{ label: "Diagnostic", value: "Fluid-mechanics model over real-time telemetry" },
-			{ label: "Objective", value: "Minimise fuel cost subject to time windows" },
+			{ label: "Reports", value: "Fuel estimate, schedule efficiency, active conflicts" },
 		],
 		stack: ["Python", "OR-Tools", "MIP", "Telemetry", "FastAPI"],
 		links: [
@@ -65,11 +69,14 @@ export const selected = [
 		year: "2025",
 		image: null,
 		summary:
-			"A distributed AI system built on Google's Agent Development Kit that coordinates seven specialised agents — pathfinding, travel cost, safety, weather and air quality among them — to plan against real-world constraints in real time. Built as a demonstration that autonomous dispatch can be decomposed into agents that each hold one competence.",
+			"A distributed AI system built on Google's Agent Development Kit. One orchestrator delegates to seven specialised agents — navigator, weather, environmental hazards, language, explorer, search and wardrobe — each holding a single competence, so a plan is assembled from independent judgements rather than one model guessing at everything. Built as a demonstration that autonomous dispatch decomposes cleanly.",
 		method: [
 			{ label: "Topology", value: "Seven specialised agents under one orchestrator" },
 			{ label: "Framework", value: "Google Agent Development Kit" },
-			{ label: "Inputs", value: "Live cost, safety, weather and air-quality feeds" },
+			{
+				label: "Agents",
+				value: "navigator, weather, env_hazards, language, explorer, search, wardrobe",
+			},
 		],
 		stack: ["Python", "Google ADK", "Multi-agent", "Cloud Run"],
 		links: [
@@ -143,11 +150,12 @@ export const selected = [
 		year: "2025",
 		image: null,
 		summary:
-			"A career management platform that ingests GitHub webhooks in real time and keeps a resume and portfolio current without being asked. An agentic RAG system on Gemini 2.5 Flash reads commit history and applies semantic filtering to separate low-impact noise from work that is actually worth claiming.",
+			"A career management platform that ingests GitHub webhooks in real time and keeps a resume and portfolio current without being asked. An agentic RAG system on Gemini 2.5 Flash reads commit history and applies semantic filtering to separate low-impact noise from work that is actually worth claiming. It answers questions over that history in conversation, and publishes the result as a profile page with the highlights already written up.",
 		method: [
 			{ label: "Trigger", value: "Real-time GitHub webhook ingestion" },
 			{ label: "Reasoning", value: "Agentic RAG on Gemini 2.5 Flash" },
 			{ label: "Hard part", value: "Semantic filtering of noise from signal" },
+			{ label: "Output", value: "Conversational answers and a published profile page" },
 		],
 		stack: ["Python", "Gemini 2.5 Flash", "RAG", "Webhooks", "Vector search"],
 		links: [{ label: "Live", href: "https://enzo.stabilty.com/" }],
@@ -258,10 +266,10 @@ export const archive = [
 	},
 	{
 		name: "Whisperer",
-		kind: "Immersive horror reader with an AI companion, built with Kiro",
+		kind: "Horror reader on a phosphor-terminal interface, with blur-on-idle text, a curator console and toggles for motion, blur and narration",
 		discipline: "ai",
 		image: null,
-		stack: ["Kiro", "JavaScript"],
+		stack: ["Kiro", "JavaScript", "Speech synthesis"],
 		links: [
 			{
 				label: "Write-up",
