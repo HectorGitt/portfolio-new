@@ -119,11 +119,18 @@ export const selected = [
 		method: [
 			{ label: "Generation", value: "TripoSG image-to-3D, served behind FastAPI" },
 			{ label: "Runtime", value: "CUDA container for GPU inference" },
-			{ label: "Interface", value: "Orbitable mesh preview with fit measurements" },
+			{ label: "Interface", value: "React Three Fiber mesh viewer with orbit control" },
 		],
-		stack: ["Python", "FastAPI", "TripoSG", "Docker", "CUDA"],
-		// The frontend repo is private, so it 404s for visitors and is not linked.
+		stack: [
+			"TypeScript",
+			"React Three Fiber",
+			"three.js",
+			"FastAPI",
+			"TripoSG",
+			"CUDA",
+		],
 		links: [
+			{ label: "Frontend", href: "https://github.com/HectorGitt/glance-glamour" },
 			{ label: "Backend", href: "https://github.com/HectorGitt/avera-backend" },
 			{ label: "3D service", href: "https://github.com/HectorGitt/avera" },
 		],
@@ -439,8 +446,8 @@ export const skills = [
 			"TripoSG",
 			"Image-to-3D inference",
 			"CUDA / GPU serving",
-			"Three.js",
-			"Browser mesh preview",
+			"three.js",
+			"React Three Fiber",
 		],
 	},
 	{

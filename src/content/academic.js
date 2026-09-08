@@ -128,7 +128,7 @@ export const researchInterests = [
 			"The physical training is not decorative here. A crack in concrete and a failing hydraulic line are materials problems before they are computer-vision problems, and my degree is in the mechanics of physical systems rather than in images of them.",
 		],
 		grounding: [
-			"Glance & Glamour — an image-to-3D model served behind a FastAPI inference API on a CUDA container, with an orbitable mesh preview on the front",
+			"Glance & Glamour — an image-to-3D model served behind a FastAPI inference API on a CUDA container, with a React Three Fiber mesh viewer on the front",
 			"Copernican — physical integration against NASA's live EONET feed, rendered in 3D",
 			"WatchWay — GIS telemetry ranked by hazard severity through a priority queue",
 			"84% in Fluid Mechanics, 80% in Engineering Mechanics — the failure models underneath",
