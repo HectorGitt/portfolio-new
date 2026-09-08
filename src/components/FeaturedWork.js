@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { selected } from "../content/projects";
+import { selected, totalProjects } from "../content/projects";
 import { useScroll } from "./useScroll";
 import SheetHead from "./SheetHead";
 import { Page, Sheet, TagRow, Tag, revealUp, revealStagger } from "./ui";
@@ -18,7 +18,7 @@ const FeaturedWork = () => {
 			<Page>
 				<SheetHead
 					label="Selected"
-					meta="3 of 19"
+					meta={`${featured.length} of ${totalProjects}`}
 					title="Three worth reading first"
 					intro="A routing engine that also predicts engine failure, seven agents planning together, and a solar system running on live NASA data."
 				/>
@@ -47,7 +47,7 @@ const FeaturedWork = () => {
 					))}
 				</Grid>
 
-				<AllLink to="/engineering">See all nineteen &rarr;</AllLink>
+				<AllLink to="/engineering">See all {totalProjects} &rarr;</AllLink>
 			</Page>
 		</Sheet>
 	);

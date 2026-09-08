@@ -123,12 +123,12 @@ export const researchInterests = [
 		thesis:
 			"Infrastructure fails slowly and in public, and we still mostly find out by sending someone to look. I want to work on autonomous inspection: systems that reconstruct a structure's geometry, locate damage inside that model, and decide where to look next.",
 		body: [
-			"I have built most of this pipeline already, in pieces. I generate 3D geometry from 2D input — point clouds and watertight meshes through Coreform Trelis, and generative reconstruction with Hunyuan3D. Copernican integrates physical motion against a live external feed and renders it in the browser. WatchWay closes the far end, taking hazard reports as GIS telemetry and ranking repairs by severity through a priority queue.",
+			"I have built pieces of this pipeline already. Glance & Glamour turns a photograph into a 3D body mesh: the generative model is TripoSG, and my part is the platform around it — the inference service and CUDA container that serve it, and the browser preview that lets you orbit the result. Copernican integrates physical motion against a live external feed and renders it in the browser. WatchWay closes the far end, taking hazard reports as GIS telemetry and ranking repairs by severity through a priority queue.",
 			"What I want from a research group is the join: learned damage detection sitting between the reconstruction and the dispatch, so that a digital twin is an assessment of a structure rather than a picture of one, and the inspection decides its own next move.",
 			"The physical training is not decorative here. A crack in concrete and a failing hydraulic line are materials problems before they are computer-vision problems, and my degree is in the mechanics of physical systems rather than in images of them.",
 		],
 		grounding: [
-			"3D reconstruction — point clouds and watertight meshes in Coreform Trelis, generative reconstruction with Hunyuan3D",
+			"Glance & Glamour — an image-to-3D model served behind a FastAPI inference API on a CUDA container, with an orbitable mesh preview on the front",
 			"Copernican — physical integration against NASA's live EONET feed, rendered in 3D",
 			"WatchWay — GIS telemetry ranked by hazard severity through a priority queue",
 			"84% in Fluid Mechanics, 80% in Engineering Mechanics — the failure models underneath",

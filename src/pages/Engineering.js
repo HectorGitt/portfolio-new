@@ -6,13 +6,14 @@ import SkillsInventory from "../components/SkillsInventory";
 import NextStep from "../components/NextStep";
 import { pageAnime } from "../animation";
 import { usePageMeta } from "../components/usePageMeta";
+import { totalProjects } from "../content/projects";
 import { useMotionStart } from "../components/useScroll";
 
 const Engineering = () => {
 	const start = useMotionStart();
 	usePageMeta(
 		"Engineering",
-		"Nineteen systems built and shipped: routing engines, telemetry pipelines, multi-agent AI and full-stack platforms, plus six years of production engineering experience."
+		`${totalProjects} systems built and shipped: routing engines, telemetry pipelines, multi-agent AI, 3D model serving and full-stack platforms, plus six years of production engineering experience.`
 	);
 
 	return (
@@ -21,9 +22,9 @@ const Engineering = () => {
 			sheet={`Rev ${availability.revision}`}
 			label="Engineering"
 			title="Built, shipped, measured"
-			lede="Nineteen systems, six years of production work, and the stack that carried them. The three at the top are where optimisation and physics do real work."
+			lede={`${totalProjects} systems, six years of production work, and the stack that carried them. The three at the top are where optimisation and physics do real work.`}
 			facts={[
-				{ value: "19", label: "systems on file" },
+				{ value: String(totalProjects), label: "systems on file" },
 				{ value: "6 yr", label: "in production" },
 				{ value: "98.7%", label: "best latency win" },
 			]}

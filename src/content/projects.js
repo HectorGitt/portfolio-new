@@ -10,6 +10,7 @@ import getlinked from "../images/projects/getlinked.webp";
 import hypertrove from "../images/projects/hypertrove.webp";
 import outlook from "../images/projects/outlook.webp";
 import adacubator from "../images/projects/adacubator.webp";
+import avera from "../images/projects/avera.webp";
 import softplayer from "../images/projects/softplayer.webp";
 import streamlab from "../images/projects/streamlab.webp";
 
@@ -107,6 +108,27 @@ export const selected = [
 		],
 	},
 	{
+		id: "glance-glamour",
+		name: "Glance & Glamour",
+		kind: "Virtual try-on with image-to-3D avatars",
+		discipline: "ai",
+		year: "2025",
+		image: avera,
+		summary:
+			"A try-on platform that turns an uploaded photograph into a 3D body avatar before any garment goes on it. The preview is a real mesh the wearer can orbit rather than a rendered turntable, checked against fit measurements first. I built the platform and its onboarding, and the serving layer underneath: TripoSG — an open image-to-3D rectified-flow model — put behind a FastAPI inference API and containerised on a PyTorch CUDA image for GPU deployment.",
+		method: [
+			{ label: "Generation", value: "TripoSG image-to-3D, served behind FastAPI" },
+			{ label: "Runtime", value: "CUDA container for GPU inference" },
+			{ label: "Interface", value: "Orbitable mesh preview with fit measurements" },
+		],
+		stack: ["Python", "FastAPI", "TripoSG", "Docker", "CUDA"],
+		// The frontend repo is private, so it 404s for visitors and is not linked.
+		links: [
+			{ label: "Backend", href: "https://github.com/HectorGitt/avera-backend" },
+			{ label: "3D service", href: "https://github.com/HectorGitt/avera" },
+		],
+	},
+	{
 		id: "enzo",
 		name: "Enzo",
 		kind: "Zero-touch career copilot",
@@ -137,8 +159,12 @@ export const selected = [
 			{ label: "Input", value: "GIS telemetry from civic reports" },
 			{ label: "Output", value: "Ordered municipal resource allocation" },
 		],
-		stack: ["Python", "GIS", "Priority queues", "React"],
-		links: [{ label: "Live", href: "https://watchway.stabilty.com/" }],
+		stack: ["TypeScript", "React", "Python", "GIS", "Priority queues"],
+		links: [
+			{ label: "Live", href: "https://watchway.stabilty.com/" },
+			{ label: "Code", href: "https://github.com/HectorGitt/watchway" },
+			{ label: "Backend", href: "https://github.com/HectorGitt/watchway-backend" },
+		],
 	},
 	{
 		id: "closetic",
@@ -313,6 +339,9 @@ export const archive = [
 	},
 ];
 
+/** Derived so the counts printed around the site cannot drift from the data. */
+export const totalProjects = selected.length + archive.length;
+
 export const writing = [
 	{
 		title: "Building the Copernican solar system and Earth simulator with live NASA EONET data",
@@ -405,13 +434,13 @@ export const skills = [
 		items: ["React", "Next.js", "Redux", "styled-components", "SCSS"],
 	},
 	{
-		group: "3D geometry & reconstruction",
+		group: "3D & model serving",
 		items: [
-			"Coreform Trelis",
-			"Hunyuan3D",
-			"Point clouds",
-			"Watertight meshes",
+			"TripoSG",
+			"Image-to-3D inference",
+			"CUDA / GPU serving",
 			"Three.js",
+			"Browser mesh preview",
 		],
 	},
 	{

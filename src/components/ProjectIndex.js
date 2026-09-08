@@ -29,7 +29,7 @@ const ProjectIndex = () => {
 					label="Index"
 					meta={`${total} entries`}
 					title="Systems I have built"
-					intro="Seven carry enough engineering to be worth reading in full. The rest are listed below them."
+					intro={`${selected.length} carry enough engineering to be worth reading in full. The rest are listed below them.`}
 				/>
 
 				<Filters role="group" aria-label="Filter projects by discipline">
