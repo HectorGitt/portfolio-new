@@ -13,7 +13,7 @@ const Overview = () => {
 	const start = useMotionStart();
 	usePageMeta(
 		null,
-		"Systems engineer and full-stack architect. First Class Honours in Agricultural & Environmental Engineering, top of the department. Open to research positions and visa-sponsored software roles."
+		"Systems engineer and full-stack architect. First Class Honours in Agricultural & Environmental Engineering, top of the department. Open to research positions and software engineering roles."
 	);
 
 	return (

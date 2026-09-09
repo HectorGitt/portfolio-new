@@ -14,7 +14,7 @@ const Footer = () => (
 						{identity.role} &middot; {identity.location}
 					</Line>
 					<Line>
-						{availability.sponsorship} &middot; {availability.relocation}
+						{availability.relocation}
 					</Line>
 				</Left>
 

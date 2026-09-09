@@ -1,8 +1,14 @@
 # Olaitan Adeniyi — portfolio
 
 A portfolio aimed at two readers at once: graduate admissions committees, and
-engineering teams hiring into visa-sponsored roles. Each gets its own route and
-its own document, from one shared set of facts.
+engineering teams hiring internationally. Each gets its own route and its own
+document, from one shared set of facts.
+
+Two things are deliberately absent from the rendered site: the personal Gmail
+address, and any declaration of visa status or nationality. Both stay in the CV
+PDF, which goes to people who have asked for it. Publishing an address invites
+scrapers, and publishing a passport invites a filter applied before anyone has
+read the work.
 
 ## Design
 
