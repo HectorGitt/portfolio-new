@@ -58,7 +58,7 @@ the matching entry in `src/content/` in the same commit, and bump
 | Path | For |
 | --- | --- |
 | `/` | Both — title block, positioning, selected work, career log, writing |
-| `/engineering` | Hiring — 19 systems, filterable by discipline, plus the skills inventory |
+| `/engineering` | Hiring — 20 systems, filterable by discipline, plus the skills inventory |
 | `/research` | Supervisors — research tracks, degree record, transcript, awards, teaching |
 | `/contact` | Both — channels, eligibility, and both documents |
 
@@ -148,17 +148,28 @@ Do not set `NODE_ENV=production` in the Netlify environment. It makes Netlify
 skip `devDependencies`, and `react-snap` is one — prerendering would stop
 without any other symptom.
 
-## Screenshots still needed
+## Project screenshots
 
-Five projects render a hatched "plot pending" cell instead of a screenshot,
-because no real image exists for them. Add a WebP (or PNG) to `src/images/projects/`,
-import it at the top of `src/content/projects.js`, and set it on the entry:
+Every entry now has a real screenshot, stored as WebP in `src/images/projects/`
+and imported at the top of `src/content/projects.js`.
 
-- EagleSight — <https://eaglesight.deniyi.link/>
-- Locus — <https://locus-agent-service-380433705339.us-central1.run.app/>
-- Enzo — <https://enzo.stabilty.com/>
-- WatchWay — <https://watchway.stabilty.com/>
-- Whisperer — no live deployment
+Entries set to `image: null` fall back to a hatched "plot pending" plate rather
+than borrowing an unrelated screenshot, which is what the previous site did —
+EagleSight, Locus, Enzo, WatchWay and Whisperer all showed other projects'
+images. Keep that fallback for any new entry until a genuine capture exists.
+
+Glance & Glamour's plate is a frame lifted from a screen recording, since its
+Cloud Run deployment is gone. `ffmpeg` crops the browser chrome and scrollbar,
+then encodes a single frame:
+
+```bash
+ffmpeg -ss 1.7 -i recording.mp4 -frames:v 1   -vf "crop=1896:830:0:62,scale=1200:-1:flags=lanczos"   -c:v libwebp -quality 82 src/images/projects/name.webp
+```
+
+Prefer WebP over GIF for anything motion-derived: a 9-second GIF at 700px came
+out at 564 KB against 196 KB for animated WebP at 900px, and 13 KB for the
+still actually used.
+
 
 ## Links deliberately omitted
 
@@ -168,3 +179,9 @@ shipped broken. Restore them when the underlying service returns:
 - Codeity live demo — the Cloud Run deployment 404s
 - Closetic source — the repository is private, so it 404s for visitors
 - Hypertrove live demo — `hypertrove.deniyi.link` no longer resolves
+- Locus live demo — the Cloud Run service returns 503 (checked four times over
+  a minute, having returned 200 earlier the same day). Locus is featured on the
+  homepage, so a live link that errors is worse than none. Restore it once the
+  service is up.
+
+All project links live in `src/content/projects.js`; re-check them before sending the site to anyone.

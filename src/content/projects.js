@@ -89,12 +89,10 @@ export const selected = [
 			},
 		],
 		stack: ["Python", "Google ADK", "Multi-agent", "Cloud Run"],
+		// The Cloud Run deployment returns 503; the Live link is pulled until the
+		// service is back rather than sending readers to an error page.
 		links: [
 			{ label: "Code", href: "https://github.com/HectorGitt/Locus" },
-			{
-				label: "Live",
-				href: "https://locus-agent-service-380433705339.us-central1.run.app/",
-			},
 			{
 				label: "Write-up",
 				href: "https://medium.com/@deniyi_dev/building-locus-a-multi-agent-ai-travel-assistant-from-scratch-53fb89125ba7",
