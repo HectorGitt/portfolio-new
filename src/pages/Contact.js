@@ -12,11 +12,6 @@ import softwareResume from "../file/Olaitan_Adeniyi_Software_Resume.pdf";
 
 const channels = [
 	{ label: "Email", value: identity.email, href: `mailto:${identity.email}` },
-	{
-		label: "Email, academic",
-		value: identity.academicEmail,
-		href: `mailto:${identity.academicEmail}`,
-	},
 	{ label: "Phone", value: identity.phone, href: `tel:${identity.phoneHref}` },
 	{ label: "LinkedIn", value: "in/deniyiola", href: identity.linkedin },
 	{ label: "GitHub", value: "HectorGitt", href: identity.github },
@@ -76,7 +71,7 @@ const Contact = () => {
 						</Col>
 
 						<Col variants={revealUp}>
-							<Eyebrow>Eligibility &amp; availability</Eyebrow>
+							<Eyebrow>Availability</Eyebrow>
 							<Panel>
 								<PanelRow>
 									<FieldLabel>Looking for</FieldLabel>
@@ -87,11 +82,6 @@ const Contact = () => {
 									</TickList>
 								</PanelRow>
 								<Split>
-									<PanelRow>
-										<FieldLabel>Right to work</FieldLabel>
-										<PanelValue>{availability.sponsorship}</PanelValue>
-										<PanelNote>{availability.passport}</PanelNote>
-									</PanelRow>
 									<PanelRow>
 										<FieldLabel>Location</FieldLabel>
 										<PanelValue>{availability.relocation}</PanelValue>
@@ -179,7 +169,7 @@ const PanelRow = styled.div`
 
 const Split = styled.div`
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	border-top: 1px solid ${color.rule};
 
 	> div + div {

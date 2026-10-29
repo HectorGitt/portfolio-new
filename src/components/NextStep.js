@@ -16,7 +16,7 @@ const doors = [
 	{
 		id: "hiring",
 		who: "If you are hiring",
-		lead: "Backend, data platform and applied AI roles. I need sponsorship and I can relocate.",
+		lead: "Backend, data platform and applied AI roles. I can relocate.",
 		points: [
 			"Six years shipping production systems, remote across four teams",
 			"98.7% latency reduction on the pipeline I architected",
@@ -73,7 +73,7 @@ const NextStep = () => {
 						<a href={`mailto:${identity.email}`}>{identity.email}</a>
 					</span>
 					<span className="num">
-						{availability.notice} notice &middot; {availability.passport}
+						{availability.notice} notice
 					</span>
 				</Direct>
 			</Page>

@@ -18,6 +18,7 @@ import whisperer from "../images/projects/whisperer.webp";
 import watchway from "../images/projects/watchway.webp";
 import softplayer from "../images/projects/softplayer.webp";
 import streamlab from "../images/projects/streamlab.webp";
+import solidify from "../images/projects/solidify.webp";
 
 /**
  * Project demos live on subdomains of the production domain. This is pinned
@@ -68,6 +69,36 @@ export const selected = [
 		],
 	},
 	{
+		id: "solidify",
+		name: "Solidify",
+		kind: "Interactive 3D cutaways of farm machinery",
+		discipline: "or",
+		year: "2026",
+		image: solidify,
+		summary:
+			"An agricultural engineering studio in the browser: 66 scenes across 12 tractor systems, from the diesel engine and powertrain to hydraulics, traction and field operations. Each machine can be sliced, exploded and run, with cut faces hatched by material and moving parts left whole as in a museum cutaway. Every motion is driven by the calculation behind it, so a P-V diagram or gear tooth load updates live as the mechanism turns. A professional mode shows mechanisms and sections; an academic mode adds worked examples and a Gemini tutor.",
+		method: [
+			{ label: "Coverage", value: "66 scenes across 12 tractor and implement systems" },
+			{ label: "Sectioning", value: "three-bvh-csg cutaways built in a web worker" },
+			{ label: "Kinematics", value: "Drive-graph solver and three-point linkage solver" },
+			{ label: "Physics", value: "Typed engineering formulas under 1,000+ unit tests" },
+			{
+				label: "Platform",
+				value: "Accounts, progress sync, classes and a Gemini tutor on Cloud Run",
+			},
+		],
+		stack: [
+			"TypeScript",
+			"React Three Fiber",
+			"three.js",
+			"CSG",
+			"Hono",
+			"Firestore",
+		],
+		// Repo is private — it 404s for visitors, so only the live product is linked.
+		links: [{ label: "Live", href: "https://solidify.studio" }],
+	},
+	{
 		id: "locus",
 		name: "Locus",
 		kind: "Distributed multi-agent routing system",
@@ -89,12 +120,10 @@ export const selected = [
 			},
 		],
 		stack: ["Python", "Google ADK", "Multi-agent", "Cloud Run"],
+		// The Cloud Run deployment returns 503; the Live link is pulled until the
+		// service is back rather than sending readers to an error page.
 		links: [
 			{ label: "Code", href: "https://github.com/HectorGitt/Locus" },
-			{
-				label: "Live",
-				href: "https://locus-agent-service-380433705339.us-central1.run.app/",
-			},
 			{
 				label: "Write-up",
 				href: "https://medium.com/@deniyi_dev/building-locus-a-multi-agent-ai-travel-assistant-from-scratch-53fb89125ba7",

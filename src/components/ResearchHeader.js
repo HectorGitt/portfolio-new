@@ -46,8 +46,8 @@ export const ResearchHeader = () => {
 							</WhoLine>
 						</Who>
 						<Where>
-							<a href={`mailto:${identity.academicEmail}`}>
-								{identity.academicEmail}
+							<a href={`mailto:${identity.email}`}>
+								{identity.email}
 							</a>
 							<span className="num">
 								{identity.location} &middot; Rev {availability.revision}
@@ -104,8 +104,8 @@ export const ResearchClose = () => (
 				<CloseFields>
 					<CloseField>
 						<FieldLabel>Email</FieldLabel>
-						<a href={`mailto:${identity.academicEmail}`}>
-							{identity.academicEmail}
+						<a href={`mailto:${identity.email}`}>
+							{identity.email}
 						</a>
 					</CloseField>
 					<CloseField>
@@ -114,9 +114,7 @@ export const ResearchClose = () => (
 					</CloseField>
 					<CloseField>
 						<FieldLabel>Status</FieldLabel>
-						<CloseValue>
-							{availability.sponsorship} &middot; {availability.relocation}
-						</CloseValue>
+						<CloseValue>{availability.relocation}</CloseValue>
 					</CloseField>
 					<CloseField>
 						<FieldLabel>Documents</FieldLabel>
