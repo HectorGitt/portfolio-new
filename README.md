@@ -13,8 +13,7 @@ read the work.
 ## Design
 
 The site is laid out as an engineering drawing sheet. That is not decoration —
-it comes from the subject. The work being presented is measured work (a CGPA to
-two decimals, a 98.7% latency reduction, course scores out of 100), so every
+it comes from the subject. The work being presented is measured work (a 98.7% latency reduction, course scores out of 100), so every
 claim is presented the way an instrument presents a reading: a value, a unit,
 and the source it came from.
 

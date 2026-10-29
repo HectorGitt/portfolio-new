@@ -30,7 +30,7 @@ const doors = [
 		who: "If you supervise research",
 		lead: "Doctoral or thesis-based master's positions in robotics, perception and autonomy, for 2027 entry.",
 		points: [
-			"First Class Honours, 4.52/5.00, top of the department",
+			"First Class Honours, top of the department",
 			"91% in Handling Agricultural Materials; 87% in Thermodynamics",
 			"Three research tracks, each grounded in a system I have already built",
 		],

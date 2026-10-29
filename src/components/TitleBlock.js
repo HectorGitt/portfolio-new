@@ -76,7 +76,7 @@ const TitleBlock = () => {
 				<Field>
 					<motion.div variants={plot} custom={4}>
 						<FieldLabel>Degree</FieldLabel>
-						<FieldText>First Class Honours, 4.52 / 5.00</FieldText>
+						<FieldText>First Class Honours</FieldText>
 					</motion.div>
 				</Field>
 				<Field>

@@ -43,10 +43,10 @@ export const readings = [
 		source: "Peepalytics",
 	},
 	{
-		value: "4.52",
-		unit: "/ 5.00",
-		label: "Degree CGPA, First Class Honours",
-		note: "B.Sc Agricultural & Environmental Engineering",
+		value: "91",
+		unit: "%",
+		label: "Top course score, First Class Honours",
+		note: "Handling Agricultural Materials, B.Sc Agricultural & Environmental Engineering",
 		source: "Obafemi Awolowo University",
 	},
 	{
