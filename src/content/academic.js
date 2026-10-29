@@ -9,8 +9,6 @@ export const degree = {
 	campus: "Ile-Ife, Osun State, Nigeria",
 	award: "B.Sc Agricultural & Environmental Engineering",
 	classification: "First Class Honours",
-	cgpa: "4.52",
-	cgpaScale: "5.00",
 	conferred: "July 2025",
 	span: "2020 — 2025",
 	capstone: "Performance Evaluation of a Recirculatory Aquaculture System",

@@ -24,7 +24,6 @@ const rise = {
 };
 
 const facts = [
-	{ value: degree.cgpa, label: `CGPA of ${degree.cgpaScale}` },
 	{ value: "1st", label: "in the department" },
 	{ value: "91", label: "top course score" },
 ];
@@ -41,8 +40,8 @@ export const ResearchHeader = () => {
 						<Who>
 							<WhoName>{identity.name}</WhoName>
 							<WhoLine>
-								{degree.award} &middot; {degree.classification},{" "}
-								{degree.cgpa}/{degree.cgpaScale} &middot; {degree.institution}
+								{degree.award} &middot; {degree.classification} &middot;{" "}
+								{degree.institution}
 							</WhoLine>
 						</Who>
 						<Where>

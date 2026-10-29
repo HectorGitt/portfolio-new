@@ -38,13 +38,6 @@ const AcademicRecord = () => {
 
 						<DegreeStats variants={revealUp}>
 							<Stat>
-								<FieldLabel>CGPA</FieldLabel>
-								<StatValue className="num">
-									{degree.cgpa}
-									<StatUnit>/ {degree.cgpaScale}</StatUnit>
-								</StatValue>
-							</Stat>
-							<Stat>
 								<FieldLabel>Classification</FieldLabel>
 								<StatText>{degree.classification}</StatText>
 							</Stat>
@@ -226,7 +219,7 @@ const DegreeStats = styled(motion.div)`
 	${bp.lg} {
 		border-left: none;
 		border-top: 1px solid ${color.rule};
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 	${bp.sm} {
 		grid-template-columns: 1fr;
@@ -254,23 +247,6 @@ const Stat = styled.div`
 		border-bottom: 1px solid ${color.ruleFaint};
 		padding: 1.1rem 1.25rem;
 	}
-`;
-
-const StatValue = styled.span`
-	font-size: 2.6rem;
-	font-weight: 500;
-	color: ${color.signal};
-	letter-spacing: -0.04em;
-	line-height: 1;
-	display: flex;
-	align-items: baseline;
-	gap: 0.4rem;
-`;
-
-const StatUnit = styled.span`
-	font-size: 0.7rem;
-	letter-spacing: 0.1em;
-	color: ${color.graphite};
 `;
 
 const StatText = styled.span`
