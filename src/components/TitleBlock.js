@@ -90,7 +90,7 @@ const TitleBlock = () => {
 						<FieldLabel>Status</FieldLabel>
 						<FieldText>
 							<Dot aria-hidden="true" />
-							Open to offers &mdash; {availability.relocation.toLowerCase()}
+							{availability.status}
 						</FieldText>
 					</motion.div>
 				</Field>

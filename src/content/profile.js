@@ -25,7 +25,7 @@ export const availability = {
 		"Doctoral or thesis-based master's positions in robotics, perception and autonomous systems — 2027 entry",
 		"Software engineering roles — backend, data platform, applied AI",
 	],
-	relocation: "Available to relocate",
+	status: "Open to offers",
 	notice: "Two weeks",
 	revision: "2026.09",
 };
@@ -73,7 +73,7 @@ export const positioning = {
 		"The two halves meet in my project work. EagleSight solves vehicle routing with mixed-integer programming, then predicts engine failure from a fluid-mechanics model of live telemetry. Copernican integrates orbital mechanics against NASA's live EONET feed. Locus coordinates seven specialised agents to plan against real-world constraints. Operations research on one side, production engineering on the other.",
 	],
 	nowPursuing:
-		"I am looking for two things: a research group working on perception and autonomy for machines that operate in the physical world, and software work where optimisation and reliability actually matter. I am ready to relocate for either.",
+		"I am looking for two things: a research group working on perception and autonomy for machines that operate in the physical world, and software work where optimisation and reliability actually matter.",
 };
 
 export const experience = [

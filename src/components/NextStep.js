@@ -16,7 +16,7 @@ const doors = [
 	{
 		id: "hiring",
 		who: "If you are hiring",
-		lead: "Backend, data platform and applied AI roles. I can relocate.",
+		lead: "Backend, data platform and applied AI roles.",
 		points: [
 			"Six years shipping production systems, remote across four teams",
 			"98.7% latency reduction on the pipeline I architected",

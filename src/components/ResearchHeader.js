@@ -113,7 +113,7 @@ export const ResearchClose = () => (
 					</CloseField>
 					<CloseField>
 						<FieldLabel>Status</FieldLabel>
-						<CloseValue>{availability.relocation}</CloseValue>
+						<CloseValue>{availability.status}</CloseValue>
 					</CloseField>
 					<CloseField>
 						<FieldLabel>Documents</FieldLabel>
