@@ -84,8 +84,7 @@ const Contact = () => {
 								<Split>
 									<PanelRow>
 										<FieldLabel>Location</FieldLabel>
-										<PanelValue>{availability.relocation}</PanelValue>
-										<PanelNote>Currently {identity.location}</PanelNote>
+										<PanelValue>{identity.location}</PanelValue>
 									</PanelRow>
 									<PanelRow>
 										<FieldLabel>Notice</FieldLabel>

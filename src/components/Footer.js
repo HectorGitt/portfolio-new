@@ -13,9 +13,6 @@ const Footer = () => (
 					<Line>
 						{identity.role} &middot; {identity.location}
 					</Line>
-					<Line>
-						{availability.relocation}
-					</Line>
 				</Left>
 
 				<Right>
