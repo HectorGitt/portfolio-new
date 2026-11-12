@@ -23,7 +23,7 @@ const FeaturedWork = () => {
 					label="Selected"
 					meta={`${featured.length} of ${totalProjects}`}
 					title="Three worth reading first"
-					intro="A routing engine that also predicts engine failure, seven agents planning together, and a solar system running on live NASA data."
+					intro="Machines you take apart in a VR headset, a routing engine that also predicts engine failure, and seven agents planning together."
 				/>
 
 				<Grid ref={element} variants={revealStagger} initial={start} animate={controls}>

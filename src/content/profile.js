@@ -27,7 +27,7 @@ export const availability = {
 	],
 	status: "Open to offers",
 	notice: "Two weeks",
-	revision: "2026.09",
+	revision: "2026.11",
 };
 
 /**
@@ -70,7 +70,7 @@ export const positioning = {
 	body: [
 		"My training is in agricultural and environmental engineering: thermodynamics, fluid mechanics, machine design, the rheology of biological materials. That is where I learned to distrust a claim until it carries a number and a method. I graduated top of my department with First Class Honours.",
 		"For six years I have been applying the same discipline in software. At Peepalytics I architected the ETL infrastructure on Airflow and Kafka, took a Neo4j and Pandas workload from two hours to ninety seconds, and now lead the technical roadmap for our RAG and multi-agent systems on AWS. Before that I shipped frontend platforms, IAM services and high-traffic Django backends across four teams.",
-		"The two halves meet in my project work. EagleSight solves vehicle routing with mixed-integer programming, then predicts engine failure from a fluid-mechanics model of live telemetry. Copernican integrates orbital mechanics against NASA's live EONET feed. Locus coordinates seven specialised agents to plan against real-world constraints. Operations research on one side, production engineering on the other.",
+		"The two halves meet in my project work. Solidify puts working machines on screen and in a VR headset, each running on its own physics, and turns a plain description into a model it checks by moving it. EagleSight solves vehicle routing with mixed-integer programming, then predicts engine failure from a fluid-mechanics model of live telemetry. Copernican integrates orbital mechanics against NASA's live EONET feed. Locus coordinates seven specialised agents to plan against real-world constraints. Operations research on one side, production engineering on the other.",
 	],
 	nowPursuing:
 		"I am looking for two things: a research group working on perception and autonomy for machines that operate in the physical world, and software work where optimisation and reliability actually matter.",
