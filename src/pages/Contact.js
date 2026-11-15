@@ -43,7 +43,6 @@ const Contact = () => {
 	return (
 		<motion.main variants={pageAnime} initial={start} animate="show">
 			<PageIntro
-				sheet={`Rev ${availability.revision}`}
 				label="Contact"
 				title="Start a conversation"
 				lede="I read everything that arrives. If you are weighing a role or a supervision, say which and I will send whatever else you need."
@@ -89,7 +88,6 @@ const Contact = () => {
 									<PanelRow>
 										<FieldLabel>Notice</FieldLabel>
 										<PanelValue>{availability.notice}</PanelValue>
-										<PanelNote>Rev {availability.revision}</PanelNote>
 									</PanelRow>
 								</Split>
 							</Panel>
@@ -190,15 +188,6 @@ const PanelValue = styled.p`
 	font-size: 0.98rem;
 	font-weight: 600;
 	line-height: 1.3;
-`;
-
-const PanelNote = styled.p`
-	font-family: ${font.data};
-	font-size: 0.62rem;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
-	color: ${color.graphite};
-	margin-top: 0.4rem;
 `;
 
 const Docs = styled.div`

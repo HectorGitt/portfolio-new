@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import PageIntro from "../components/PageIntro";
-import { availability } from "../content/profile";
 import ProjectIndex from "../components/ProjectIndex";
 import SkillsInventory from "../components/SkillsInventory";
 import NextStep from "../components/NextStep";
@@ -19,7 +18,6 @@ const Engineering = () => {
 	return (
 	<motion.main variants={pageAnime} initial={start} animate="show">
 		<PageIntro
-			sheet={`Rev ${availability.revision}`}
 			label="Engineering"
 			title="Built, shipped, measured"
 			lede={`${totalProjects} systems, six years of production work, and the stack that carried them. The three at the top are where optimisation and physics do real work.`}

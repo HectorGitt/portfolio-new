@@ -41,6 +41,44 @@ export const disciplines = [
  */
 export const selected = [
 	{
+		id: "solidify",
+		name: "Solidify",
+		kind: "Engineering machines in 3D and VR",
+		discipline: "or",
+		year: "2026",
+		image: solidify,
+		summary:
+			"An engineering platform where machines run on their own physics. 95 hand-built rigs across 16 systems, from a four-stroke diesel and a synchromesh gearbox to a whole tractor at work, can be cut open at any angle, taken apart and run, with every reading computed by the rig itself. Create in 3D turns a description or a photo into a working model: Gemini plans the parts and how each is held, the app assembles them by relation rather than by coordinates, and checks the result before anyone sees it, turning the mechanism through a cycle to catch parts that collide or come loose. Any lab or model opens in a Quest headset through WebXR, on the table at hand size or beside you at real size. Models save to .slfy, an open format with a public specification and schema.",
+		method: [
+			{ label: "Coverage", value: "95 working rigs across 16 engineering systems" },
+			{
+				label: "Generation",
+				value: "Gemini plans then builds; parts placed by relation, not coordinates",
+			},
+			{
+				label: "Verification",
+				value: "Every part held, moves freely through a cycle, loads act the right way",
+			},
+			{ label: "Headset", value: "WebXR on Quest: table or real size, worked by hand" },
+			{ label: "Physics", value: "Typed engineering formulas under 1,400+ tests" },
+			{ label: "Open format", value: ".slfy: specification, JSON Schema and examples" },
+		],
+		stack: [
+			"TypeScript",
+			"React Three Fiber",
+			"WebXR",
+			"Gemini on Vertex AI",
+			"Hono on Cloud Run",
+			"Firestore",
+		],
+		// The app's repository is not public; the product, the demo and the open format are.
+		links: [
+			{ label: "Live", href: "https://solidify.studio" },
+			{ label: "Format", href: "https://slfy.solidify.studio" },
+			{ label: "Format code", href: "https://github.com/HectorGitt/slfy" },
+		],
+	},
+	{
 		id: "eaglesight",
 		name: "EagleSight",
 		kind: "Fleet logistics & diagnostics engine",
@@ -67,36 +105,6 @@ export const selected = [
 				href: "https://medium.com/@deniyi_dev/building-eaglesight-a-next-gen-fleet-management-system-c29aa3b5ba80",
 			},
 		],
-	},
-	{
-		id: "solidify",
-		name: "Solidify",
-		kind: "Interactive 3D cutaways of farm machinery",
-		discipline: "or",
-		year: "2026",
-		image: solidify,
-		summary:
-			"An agricultural engineering studio in the browser: 66 scenes across 12 tractor systems, from the diesel engine and powertrain to hydraulics, traction and field operations. Each machine can be sliced, exploded and run, with cut faces hatched by material and moving parts left whole as in a museum cutaway. Every motion is driven by the calculation behind it, so a P-V diagram or gear tooth load updates live as the mechanism turns. A professional mode shows mechanisms and sections; an academic mode adds worked examples and a Gemini tutor.",
-		method: [
-			{ label: "Coverage", value: "66 scenes across 12 tractor and implement systems" },
-			{ label: "Sectioning", value: "three-bvh-csg cutaways built in a web worker" },
-			{ label: "Kinematics", value: "Drive-graph solver and three-point linkage solver" },
-			{ label: "Physics", value: "Typed engineering formulas under 1,000+ unit tests" },
-			{
-				label: "Platform",
-				value: "Accounts, progress sync, classes and a Gemini tutor on Cloud Run",
-			},
-		],
-		stack: [
-			"TypeScript",
-			"React Three Fiber",
-			"three.js",
-			"CSG",
-			"Hono",
-			"Firestore",
-		],
-		// Repo is private — it 404s for visitors, so only the live product is linked.
-		links: [{ label: "Live", href: "https://solidify.studio" }],
 	},
 	{
 		id: "locus",
@@ -481,6 +489,7 @@ export const skills = [
 	{
 		group: "Applied AI",
 		items: [
+			"Gemini on Vertex AI",
 			"Retrieval-augmented generation",
 			"Multi-agent systems",
 			"AWS Bedrock",
@@ -512,6 +521,7 @@ export const skills = [
 			"CUDA / GPU serving",
 			"three.js",
 			"React Three Fiber",
+			"WebXR",
 		],
 	},
 	{

@@ -126,6 +126,7 @@ export const researchInterests = [
 			"The physical training is not decorative here. A crack in concrete and a failing hydraulic line are materials problems before they are computer-vision problems, and my degree is in the mechanics of physical systems rather than in images of them.",
 		],
 		grounding: [
+			"Solidify — 95 machine rigs whose 3D models run on their own physics, opened in a VR headset at real size; models generated from a description are checked by turning them through a cycle and testing every part against the others",
 			"Glance & Glamour — an image-to-3D model served behind a FastAPI inference API on a CUDA container, with a React Three Fiber mesh viewer on the front",
 			"Copernican — physical integration against NASA's live EONET feed, rendered in 3D",
 			"WatchWay — GIS telemetry ranked by hazard severity through a priority queue",
