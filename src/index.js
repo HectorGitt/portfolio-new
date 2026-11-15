@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { markHydratedFromStatic } from "./prerender";
+import { startAnalytics } from "./analytics";
 
 const root = document.getElementById("root");
 
@@ -30,3 +31,4 @@ if (root.hasChildNodes()) {
 }
 
 reportWebVitals();
+startAnalytics();

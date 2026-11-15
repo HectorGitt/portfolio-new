@@ -5,7 +5,7 @@
  */
 
 export const identity = {
-	name: "Olaitan Lekan Adeniyi",
+	name: "Olaitan Adeniyi",
 	shortName: "Olaitan Adeniyi",
 	role: "Systems Engineer & Full-Stack Architect",
 	discipline: "Agricultural & Environmental Engineering",
