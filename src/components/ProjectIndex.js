@@ -49,7 +49,7 @@ const ProjectIndex = () => {
 
 				<Entries ref={element} variants={revealStagger} initial={start} animate={controls}>
 					{shownSelected.map((p) => (
-						<Entry key={p.id} variants={revealUp}>
+						<Entry key={p.id} id={p.id} variants={revealUp}>
 							<EntryHead>
 								<div>
 									<EntryName>{p.name}</EntryName>
@@ -196,6 +196,7 @@ const Entries = styled(motion.div)`
 `;
 
 const Entry = styled(motion.article)`
+	scroll-margin-top: 5.5rem;
 	border: 1px solid ${color.rule};
 	background: ${color.sheet};
 	margin-bottom: 1.5rem;

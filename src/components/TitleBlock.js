@@ -56,13 +56,6 @@ const TitleBlock = () => {
 					</motion.p>
 				</Identity>
 
-				<RevCell>
-					<motion.div variants={plot} custom={1}>
-						<FieldLabel>Rev</FieldLabel>
-						<Rev className="num">{availability.revision}</Rev>
-					</motion.div>
-				</RevCell>
-
 				<RuleSpan>
 					<DrawnRule variants={drawRule} />
 				</RuleSpan>
@@ -161,7 +154,7 @@ const Block = styled(motion.div)`
 `;
 
 const Identity = styled.div`
-	grid-column: 1 / 4;
+	grid-column: 1 / -1;
 	padding: 2.4rem 2rem 2.1rem;
 
 	h1 {
@@ -183,26 +176,6 @@ const Identity = styled.div`
 		grid-column: 1 / -1;
 		padding: 1.5rem 1.15rem 1.4rem;
 	}
-`;
-
-const RevCell = styled.div`
-	grid-column: 4 / 5;
-	border-left: 1px solid ${color.rule};
-	padding: 2.4rem 1.5rem;
-
-	${bp.md} {
-		grid-column: 1 / -1;
-		border-left: none;
-		border-top: 1px solid ${color.rule};
-		padding: 1.1rem 1.15rem;
-	}
-`;
-
-const Rev = styled.span`
-	font-size: 1.5rem;
-	font-weight: 500;
-	display: block;
-	letter-spacing: -0.01em;
 `;
 
 /** Full-width rule between the identity row and the field row. */

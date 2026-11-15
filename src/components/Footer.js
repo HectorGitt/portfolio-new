@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { identity, availability } from "../content/profile";
+import { identity } from "../content/profile";
 import { Page } from "./ui";
 import { color, font, bp } from "../theme";
 
@@ -39,7 +39,6 @@ const Footer = () => (
 			</Inner>
 
 			<Base>
-				<span className="num">Rev {availability.revision}</span>
 				<span>Drawn in React &amp; styled-components</span>
 			</Base>
 		</Page>

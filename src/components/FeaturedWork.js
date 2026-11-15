@@ -48,7 +48,7 @@ const FeaturedWork = () => {
 									<Hatch aria-hidden="true" />
 								)}
 							</CardTop>
-							<CardBody>
+							<CardBody to={`/engineering#${p.id}`} aria-label={`Read about ${p.name}`}>
 								<CardName>{p.name}</CardName>
 								<CardKind>{p.kind}</CardKind>
 								<CardLead>{p.method[0].value}</CardLead>
@@ -57,6 +57,7 @@ const FeaturedWork = () => {
 										<Tag key={s}>{s}</Tag>
 									))}
 								</TagRow>
+								<CardMore>Read the write-up &rarr;</CardMore>
 							</CardBody>
 						</Card>
 					))}
@@ -145,12 +146,32 @@ const Hatch = styled.div`
 	);
 `;
 
-const CardBody = styled.div`
+const CardBody = styled(Link)`
 	padding: 1.5rem 1.4rem 1.6rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.65rem;
 	flex: 1;
+	color: inherit;
+	text-decoration: none;
+	transition: background 0.18s ease;
+
+	&:hover,
+	&:focus-visible {
+		background: ${color.blueprintTint};
+	}
+	&:hover h3 {
+		color: ${color.signal};
+	}
+`;
+
+const CardMore = styled.span`
+	font-family: ${font.data};
+	font-size: 0.64rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: ${color.blueprint};
+	margin-top: 0.35rem;
 `;
 
 const CardName = styled.h3`

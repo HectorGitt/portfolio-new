@@ -23,7 +23,7 @@ const PageIntro = ({ sheet, label, title, lede, facts = [] }) => {
 			<motion.div initial={start} animate="show">
 				<Top variants={rise} custom={0}>
 					<Eyebrow>{label}</Eyebrow>
-					<SheetNo className="num">{sheet}</SheetNo>
+					{sheet && <SheetNo className="num">{sheet}</SheetNo>}
 				</Top>
 				<Title variants={rise} custom={1}>
 					{title}

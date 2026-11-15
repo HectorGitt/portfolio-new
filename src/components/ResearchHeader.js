@@ -49,7 +49,7 @@ export const ResearchHeader = () => {
 								{identity.email}
 							</a>
 							<span className="num">
-								{identity.location} &middot; Rev {availability.revision}
+								{identity.location}
 							</span>
 						</Where>
 					</Strip>

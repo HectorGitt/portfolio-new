@@ -27,7 +27,6 @@ export const availability = {
 	],
 	status: "Open to offers",
 	notice: "Two weeks",
-	revision: "2026.11",
 };
 
 /**
