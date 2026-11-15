@@ -71,9 +71,11 @@ export const selected = [
 			"Hono on Cloud Run",
 			"Firestore",
 		],
+		// UTM tags let Solidify's Google Analytics credit visits to this site;
+		// the outbound links use rel=noreferrer, which hides the referrer otherwise.
 		// The app's repository is not public; the product, the demo and the open format are.
 		links: [
-			{ label: "Live", href: "https://solidify.studio" },
+			{ label: "Live", href: "https://solidify.studio/?utm_source=deniyi.link&utm_medium=referral&utm_campaign=portfolio" },
 			{ label: "Format", href: "https://slfy.solidify.studio" },
 			{ label: "Format code", href: "https://github.com/HectorGitt/slfy" },
 		],
